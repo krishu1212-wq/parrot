@@ -1,0 +1,1176 @@
+{
+  "schema": "arise-question-bank-review-draft/v1",
+  "draftId": "mathematics-percentage-class-4",
+  "lifecycleStatus": "DRAFT_NOT_LIVE",
+  "publishable": false,
+  "source": {
+    "file": "attached_assets/Percentage_N.._261004084817_1791084814275.pdf",
+    "sha256": "e5eee7665e38535c1a2c4201f3225b8c6cf5817c65086be12bd1775f10412389",
+    "pageCount": 13,
+    "visibleWatermark": "Maths by Rakesh Yadav",
+    "rightsStatus": "NEEDS-REVIEW",
+    "rawTextLayerDump": ".agents/outputs/percentage-notes/page-text.txt"
+  },
+  "hierarchy": {
+    "subject": "Mathematics",
+    "chapter": "Percentage",
+    "classOrLecture": "Class 4",
+    "metadataOrigin": "Subject and Class/Lecture are supplied by the user; the PDF visibly prints only the chapter title."
+  },
+  "sections": [
+    {
+      "sourceLabel": "COMPARISION",
+      "questionNumbers": [1, 2, 3, 4, 5],
+      "sourcePages": [1, 2]
+    },
+    {
+      "sourceLabel": "FRACTION",
+      "questionNumbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+      "sourcePages": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    }
+  ],
+  "counts": {
+    "questionsDetected": 35,
+    "questionsWithFourOptions": 35,
+    "questionsWithSourceProvidedAnswerResult": 35,
+    "questionsWithSourceProvidedSolution": 35,
+    "questionsWithAnswerOptionSourceVerification": 35,
+    "questionsWithUnclearHandwrittenAnswer": 0,
+    "questionsWithHindiOcrProblems": 35,
+    "questionsNeedingManualReview": 35
+  },
+  "reviewNotes": {
+    "answerHandling": "All 35 handwritten answer results were visually matched to exactly one printed option and marked SOURCE-VERIFIED with that option label. This verifies only the source answer-to-option match; it is not an independent mathematical validation. Handwritten solution review and question-level review remain NEEDS-REVIEW.",
+    "hindiHandling": "The raw PDF text-layer Hindi excerpts are preserved without correction. They decode as garbled legacy-font text and remain NEEDS-REVIEW; visual Hindi transcription has not been substituted.",
+    "sourceVerificationBasis": "All 13 rendered PDF page images were reviewed for printed options, handwritten final results, and handwritten working. No handwritten answer was unclear.",
+    "difficulty": "No difficulty value is supplied by the source; all items are unrated.",
+    "numbering": {
+      "duplicateLabelsAcrossSections": [1, 2, 3, 4, 5],
+      "withinSectionDuplicateNumbersDetected": [],
+      "physicalOrderAnomaly": "FRACTION Q10 appears on page 11 and FRACTION Q9 on page 12. Original printed numbers and physical page order are both retained."
+    },
+    "sourceOrderDefinition": "sourceOrder is physical order in the PDF, not printed question-number order."
+  },
+  "questions": [
+    {
+      "id": "percentage-class4-comparison-q01",
+      "sectionLabel": "COMPARISION",
+      "sourceOrder": 1,
+      "sourceQuestionNumber": 1,
+      "questionPage": 1,
+      "optionPages": [1],
+      "englishText": "What is the percentage form of the ratio of 1 : 8?",
+      "hindiTextRaw": "1 % 8 ds vuqikr dk çfr'kr :i D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "6.25%" },
+        { "label": "b", "text": "12.5%" },
+        { "label": "c", "text": "8%" },
+        { "label": "d", "text": "80%" }
+      ],
+      "handwrittenAnswer": {
+        "result": "12.5%",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 1
+      },
+      "handwrittenSolution": {
+        "transcription": "1:8; 1/8 × 100% = 12 1/2%.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [1]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-comparison-q02",
+      "sectionLabel": "COMPARISION",
+      "sourceOrder": 2,
+      "sourceQuestionNumber": 2,
+      "questionPage": 1,
+      "optionPages": [1],
+      "englishText": "Find the number, which is 30% more than 240.",
+      "hindiTextRaw": "og la[;k Kkr dhft, tks 240 ls 30» vf/\\nd  gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "312" },
+        { "label": "b", "text": "340" },
+        { "label": "c", "text": "331" },
+        { "label": "d", "text": "320" }
+      ],
+      "handwrittenAnswer": {
+        "result": "312",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 1
+      },
+      "handwrittenSolution": {
+        "transcription": "240 + (240 × 30/100) = 240 + 72 = 312.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [1]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-comparison-q03",
+      "sectionLabel": "COMPARISION",
+      "sourceOrder": 3,
+      "sourceQuestionNumber": 3,
+      "questionPage": 1,
+      "optionPages": [1],
+      "englishText": "If 28% of a number is 20, then what is the value of 49% of the same number?",
+      "hindiTextRaw": ";fn fdlh la[;k dk 28»] 20 gS] rks mlh la[;k ds 49» dk eku D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "45.5" },
+        { "label": "b", "text": "42" },
+        { "label": "c", "text": "38.5" },
+        { "label": "d", "text": "35" }
+      ],
+      "handwrittenAnswer": {
+        "result": "35",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "d",
+        "sourcePage": 1
+      },
+      "handwrittenSolution": {
+        "transcription": "Method 1: N × 28% = 20; N = 20 × 25/7; N × 49% = (20 × 25/7) × 49/100 = 35. Alternate method: 28% → 20; 1% → 20/28; 49% → (20/28) × 49 = 35.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [1]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-comparison-q04",
+      "sectionLabel": "COMPARISION",
+      "sourceOrder": 4,
+      "sourceQuestionNumber": 4,
+      "questionPage": 1,
+      "optionPages": [1],
+      "englishText": "The difference between 48% and 38%, of a number is 354. What is 58% of that number?",
+      "hindiTextRaw": "fdlh la[;k ds 48» vkSj 38» ds chp dk varj 354 gSA ml la[;k dk 58» D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "2034.6" },
+        { "label": "b", "text": "1893.78" },
+        { "label": "c", "text": "1987.56" },
+        { "label": "d", "text": "2053.2" }
+      ],
+      "handwrittenAnswer": {
+        "result": "2053.2",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "d",
+        "sourcePage": 1
+      },
+      "handwrittenSolution": {
+        "transcription": "N × 48% − N × 38% = 354; 10/100 × N = 354; N = 3540; N × 58% = 3540 × 58/100 = 2053.2. An alternate percentage diagram is also shown.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [1]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-comparison-q05",
+      "sectionLabel": "COMPARISION",
+      "sourceOrder": 5,
+      "sourceQuestionNumber": 5,
+      "questionPage": 2,
+      "optionPages": [2],
+      "englishText": "The difference between 82% and 73% of the same number is 72. What is 48% of the number?",
+      "hindiTextRaw": "/,d gh la[;k ds 82» vkSj 73» ds chp dk varj 72 gSA la[;k dk 48» D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "418" },
+        { "label": "b", "text": "384" },
+        { "label": "c", "text": "360" },
+        { "label": "d", "text": "1440/31" }
+      ],
+      "handwrittenAnswer": {
+        "result": "384",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 2
+      },
+      "handwrittenSolution": {
+        "transcription": "82% − 73% = 9%; 9% → 72; 1% → 72/9 = 8; 48% → 48 × 8 = 384.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [2]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q01",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 6,
+      "sourceQuestionNumber": 1,
+      "questionPage": 2,
+      "optionPages": [2],
+      "englishText": "If 16 2/3% of a number is added with itself then result becomes 4956. Find the original number.",
+      "hindiTextRaw": "fdlh la[;k esa mlds 16 % dks tksM+us ij çkIr la[;k 4956 gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "4248" },
+        { "label": "b", "text": "4215" },
+        { "label": "c", "text": "4315" },
+        { "label": "d", "text": "1458" }
+      ],
+      "handwrittenAnswer": {
+        "result": "4248",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 3
+      },
+      "handwrittenSolution": {
+        "transcription": "16 2/3% = 1/6. Method 1: x + x/6 = 4956; 7x/6 = 4956; x = 4956 × 6/7 = 4248. Alternate unit method: 6 units + 1 unit = 7 units → 4956; 1 unit → 708; original 6 units → 4248.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [3]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q02",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 7,
+      "sourceQuestionNumber": 2,
+      "questionPage": 3,
+      "optionPages": [3],
+      "englishText": "If 6 2/3% of a number is subtracted from with itself then result becomes 5670. Find the original number.",
+      "hindiTextRaw": "fdlh la[;k dks mlds 6 % ls ?kVkus ij la[;k 5670 çkIr gksrk gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "7015" },
+        { "label": "b", "text": "8102" },
+        { "label": "c", "text": "6075" },
+        { "label": "d", "text": "5012" }
+      ],
+      "handwrittenAnswer": {
+        "result": "6075",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 3
+      },
+      "handwrittenSolution": {
+        "transcription": "6 2/3% = 1/15. Method 1: x − x/15 = 5670; 14x/15 = 5670; x = 5670/14 × 15 = 6075. Alternate unit method: 15 − 1 = 14 units → 5670; 1 unit → 405; original 15 units → 6075.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [3]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q03",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 8,
+      "sourceQuestionNumber": 3,
+      "questionPage": 3,
+      "optionPages": [3],
+      "englishText": "If 11 1/9% of a number is added with itself then result becomes 900. Find the original number.",
+      "hindiTextRaw": "fdlh la[;k dks mlds 11 % esa tksM+us ij 900 çkIr gksrk gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "840" },
+        { "label": "b", "text": "810" },
+        { "label": "c", "text": "850" },
+        { "label": "d", "text": "870" }
+      ],
+      "handwrittenAnswer": {
+        "result": "810",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 3
+      },
+      "handwrittenSolution": {
+        "transcription": "11 1/9% = 1/9. Original 9 units + 1 unit = 10 units → 900; 1 unit → 90; original 9 units → 810.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [3]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q04",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 9,
+      "sourceQuestionNumber": 4,
+      "questionPage": 4,
+      "optionPages": [4],
+      "englishText": "If 64 is added in a number then number becomes 157 1/7% of itself. Find the number.",
+      "hindiTextRaw": "fdlh la[;k esa 64 tksM+us ij la[;k vius dk 157 % cu tkrh gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "112" },
+        { "label": "b", "text": "130" },
+        { "label": "c", "text": "133" },
+        { "label": "d", "text": "125" }
+      ],
+      "handwrittenAnswer": {
+        "result": "112",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 4
+      },
+      "handwrittenSolution": {
+        "transcription": "157 1/7% = 11/7. Let the number be x: x + 64 = 11x/7; 64 = 4x/7; x = 64 × 7/4 = 112. Alternate unit diagram: 4 units → 64; 1 unit → 16; original 7 units → 112.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [4]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q05",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 10,
+      "sourceQuestionNumber": 5,
+      "questionPage": 4,
+      "optionPages": [4],
+      "englishText": "If 930 is added in a number then number becomes 444 4/9% of itself. Find the original number.",
+      "hindiTextRaw": "fdlh la[;k esa 930 tksM+k tk, rks og la[;k vius dk 444 % gks tkrh gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "250" },
+        { "label": "b", "text": "270" },
+        { "label": "c", "text": "230" },
+        { "label": "d", "text": "170" }
+      ],
+      "handwrittenAnswer": {
+        "result": "270",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 4
+      },
+      "handwrittenSolution": {
+        "transcription": "444 4/9% = 400% + 44 4/9% = 40/9. Original 9 units; resulting number 40 units; difference 31 units → 930; 1 unit → 30; original 9 units → 270.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [4]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q06",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 11,
+      "sourceQuestionNumber": 6,
+      "questionPage": 5,
+      "optionPages": [5],
+      "englishText": "If 16 is added in a number then result becomes 116 2/3% of itself. Find the number.",
+      "hindiTextRaw": ";fn fdlh la[;k esa 16 tksM+k tk, rks ifj.kkeh la[;k dk 116 % gks tkrk gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "96" },
+        { "label": "b", "text": "90" },
+        { "label": "c", "text": "64" },
+        { "label": "d", "text": "112" }
+      ],
+      "handwrittenAnswer": {
+        "result": "96",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 5
+      },
+      "handwrittenSolution": {
+        "transcription": "116 2/3% = 100% + 16 2/3% = 1 + 1/6 = 7/6. Original 6 units; resulting number 7 units; +1 unit → 16; original 6 units → 16 × 6 = 96.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [5]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q07",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 12,
+      "sourceQuestionNumber": 7,
+      "questionPage": 5,
+      "optionPages": [5],
+      "englishText": "If 21 is added in a number then result becomes 137 1/2% of number. Find the number.",
+      "hindiTextRaw": ";fn fdlh la[;k esa 21 tksM+k tk, rks ifj.kkeh la[;k dk 137 % gks tkrk gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "56" },
+        { "label": "b", "text": "50" },
+        { "label": "c", "text": "57" },
+        { "label": "d", "text": "26" }
+      ],
+      "handwrittenAnswer": {
+        "result": "56",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 5
+      },
+      "handwrittenSolution": {
+        "transcription": "137 1/2% = 100% + 37 1/2% = 1 + 3/8 = 11/8. Original 8 units; resulting number 11 units; +3 units → 21; 1 unit → 7; original 8 units → 8 × 7 = 56.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [5]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q08",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 13,
+      "sourceQuestionNumber": 8,
+      "questionPage": 5,
+      "optionPages": [6],
+      "englishText": "If 20 is added in a number then result becomes 166 2/3% of number. Find the number.",
+      "hindiTextRaw": ";fn fdlh la[;k esa 20 tksM+k tk, rks ifj.kkeh la[;k dk 166 % gks tkrk gSA la[;k Kkr djsa\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "46" },
+        { "label": "b", "text": "70" },
+        { "label": "c", "text": "30" },
+        { "label": "d", "text": "50" }
+      ],
+      "handwrittenAnswer": {
+        "result": "30",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 6
+      },
+      "handwrittenSolution": {
+        "transcription": "166 2/3% = 100% + 66 2/3% = 1 + 2/3 = 5/3. Original 3 units; resulting number 5 units; +2 units → 20; 1 unit → 10; original 3 units → 10 × 3 = 30.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [6]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q11",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 14,
+      "sourceQuestionNumber": 11,
+      "questionPage": 6,
+      "optionPages": [6],
+      "englishText": "A number which, when increased by 16% becomes 1914. The number is:",
+      "hindiTextRaw": ",d la[;k ftls tc 16» c<+k;k tkrk gS rks 1914 gks tkrh gS] la[;k gS&",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "2220" },
+        { "label": "b", "text": "1650" },
+        { "label": "c", "text": "2010" },
+        { "label": "d", "text": "1780" }
+      ],
+      "handwrittenAnswer": {
+        "result": "1650",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 6
+      },
+      "handwrittenSolution": {
+        "transcription": "16% = 4/25. Original 25 units + 4 units = 29 units → 1914; 1 unit → 1914/29 = 66; original 25 units → 1914 × 25/29 = 1650.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [6]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q12",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 15,
+      "sourceQuestionNumber": 12,
+      "questionPage": 6,
+      "optionPages": [6],
+      "englishText": "When a number is increased by 40, it becomes 125% of itself. What is the number?",
+      "hindiTextRaw": "tc dksbZ la[;k 40 ls c<+k nh tkrh gS rks og Lo;a dh 125» gks tkrh gSA og la[;k D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "200" },
+        { "label": "b", "text": "60" },
+        { "label": "c", "text": "160" },
+        { "label": "d", "text": "100" }
+      ],
+      "handwrittenAnswer": {
+        "result": "160",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 6
+      },
+      "handwrittenSolution": {
+        "transcription": "125% = 100% + 25% = 1 + 1/4 = 5/4. Original 4 units; resulting number 5 units; +1 unit → 40; original 4 units → 40 × 4 = 160. An alternate 25% = 1/4 diagram is also shown.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [6]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q13",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 16,
+      "sourceQuestionNumber": 13,
+      "questionPage": 7,
+      "optionPages": [7],
+      "englishText": "When a number is increased by 216, it becomes 140% of itself. What is the number?",
+      "hindiTextRaw": "tc fdlh la[;k dks 216 ls c<+k;k tkrk gS rks og Lo;a 140» gks tkrh gSA og la[;k D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "540" },
+        { "label": "b", "text": "756" },
+        { "label": "c", "text": "450" },
+        { "label": "d", "text": "675" }
+      ],
+      "handwrittenAnswer": {
+        "result": "540",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 7
+      },
+      "handwrittenSolution": {
+        "transcription": "140% = 100% + 40%; 40% = 2/5. 2 units → 216; 1 unit → 108; original 5 units → 108 × 5 = 540.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [7]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q14",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 17,
+      "sourceQuestionNumber": 14,
+      "questionPage": 7,
+      "optionPages": [7],
+      "englishText": "When a number is increased by 24, it becomes 115% of itself. What is the number?",
+      "hindiTextRaw": "tc fdlh la[;k dks 24 ls c<+k;k tkrk gS rks og Loa; dk 115» gks tkrh gSA og la[;k D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "160" },
+        { "label": "b", "text": "250" },
+        { "label": "c", "text": "100" },
+        { "label": "d", "text": "200" }
+      ],
+      "handwrittenAnswer": {
+        "result": "160",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 7
+      },
+      "handwrittenSolution": {
+        "transcription": "15% = 3/20. 3 units → 24; 1 unit → 8; original 20 units → 20 × 8 = 160.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [7]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q15",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 18,
+      "sourceQuestionNumber": 15,
+      "questionPage": 8,
+      "optionPages": [8],
+      "englishText": "The 8th share of a number is equal to what percentage of it?",
+      "hindiTextRaw": "fdlh la[;k dk 8ok¡ Hkkx mlds fdrus çfr'kr ds cjkcj gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "12.5%" },
+        { "label": "b", "text": "25%" },
+        { "label": "c", "text": "2.5%" },
+        { "label": "d", "text": "1.25%" }
+      ],
+      "handwrittenAnswer": {
+        "result": "12.5%",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 8
+      },
+      "handwrittenSolution": {
+        "transcription": "1/8 × 100% = 12.5%.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [8]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q16",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 19,
+      "sourceQuestionNumber": 16,
+      "questionPage": 8,
+      "optionPages": [8],
+      "englishText": "76% of a number is 95. The number is.",
+      "hindiTextRaw": "fdlh la[;k dk 76»] 95 gSA la[;k gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "124" },
+        { "label": "b", "text": "125" },
+        { "label": "c", "text": "120" },
+        { "label": "d", "text": "130" }
+      ],
+      "handwrittenAnswer": {
+        "result": "125",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 8
+      },
+      "handwrittenSolution": {
+        "transcription": "76% = 19/25. 19 units → 95; 1 unit → 95/19 = 5; original 25 units → 25 × 5 = 125.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [8]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q17",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 20,
+      "sourceQuestionNumber": 17,
+      "questionPage": 8,
+      "optionPages": [8],
+      "englishText": "108% of a number is 189. What is the number?",
+      "hindiTextRaw": "fdlh la[;k dk 108»] 189 gSA og la[;k D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "200" },
+        { "label": "b", "text": "175" },
+        { "label": "c", "text": "190" },
+        { "label": "d", "text": "180" }
+      ],
+      "handwrittenAnswer": {
+        "result": "175",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 8
+      },
+      "handwrittenSolution": {
+        "transcription": "108% = 100% + 8% = 1 + 2/25 = 27/25. 27 units → 189; 1 unit → 7; original 25 units → 25 × 7 = 175.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [8]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q18",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 21,
+      "sourceQuestionNumber": 18,
+      "questionPage": 8,
+      "optionPages": [8],
+      "englishText": "If 27.5% of a number is 11, then the number is.",
+      "hindiTextRaw": ";fn fdlh la[;k dk 27-5»] 11 gS] rks og la[;k gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "44" },
+        { "label": "b", "text": "36" },
+        { "label": "c", "text": "40" },
+        { "label": "d", "text": "48" }
+      ],
+      "handwrittenAnswer": {
+        "result": "40",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 8
+      },
+      "handwrittenSolution": {
+        "transcription": "27.5% = 25% + 2.5% = 1/4 + 1/40 = 11/40. 11 units → 11; 1 unit → 1; original 40 units → 40.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [8]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q19",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 22,
+      "sourceQuestionNumber": 19,
+      "questionPage": 9,
+      "optionPages": [9],
+      "englishText": "A number when increased by 47 1/2% gives 590. The number is.",
+      "hindiTextRaw": ",d la[;k dks 47 % c<+kus ij 590 çkIr gksrk gSA la[;k gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "400" },
+        { "label": "b", "text": "600" },
+        { "label": "c", "text": "500" },
+        { "label": "d", "text": "700" }
+      ],
+      "handwrittenAnswer": {
+        "result": "400",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 9
+      },
+      "handwrittenSolution": {
+        "transcription": "47 1/2% = 45% + 2 1/2% = 9/20 + 1/40 = 19/40. Original 40 units + 19 units = 59 units; 59 units → 590; scaling shown by ×10 gives original 40 × 10 = 400.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [9]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q20",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 23,
+      "sourceQuestionNumber": 20,
+      "questionPage": 9,
+      "optionPages": [9],
+      "englishText": "A number becomes 725 when increased by 45%. Find the number.",
+      "hindiTextRaw": ",d la[;k esa 45» o`f¼ djus ij og 725 gks tkrh gSA la[;k Kkr dhft,A",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "500" },
+        { "label": "b", "text": "450" },
+        { "label": "c", "text": "600" },
+        { "label": "d", "text": "525" }
+      ],
+      "handwrittenAnswer": {
+        "result": "500",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 9
+      },
+      "handwrittenSolution": {
+        "transcription": "45% = 9/20. 20 + 9 = 29 units → 725; 1 unit → 725/29 = 25; original 20 units → 25 × 20 = 500.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [9]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q21",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 24,
+      "sourceQuestionNumber": 21,
+      "questionPage": 9,
+      "optionPages": [9],
+      "englishText": "If 75% of a number is added to 75, then the result is the number itself. The number is.",
+      "hindiTextRaw": ";fn fdlh la[;k ds 75» dks 75 esa tksM+k tk, rks ifj.kke ogh la[;k gksxhA la[;k gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "300" },
+        { "label": "b", "text": "200" },
+        { "label": "c", "text": "250" },
+        { "label": "d", "text": "350" }
+      ],
+      "handwrittenAnswer": {
+        "result": "300",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 9
+      },
+      "handwrittenSolution": {
+        "transcription": "N × 75% + 75 = N; N × 3/4 + 75 = N; 75 = N − 3N/4; N/4 = 75; N = 300. An alternate 100% = 75% + 25% unit method is also shown.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [9]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q22",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 25,
+      "sourceQuestionNumber": 22,
+      "questionPage": 10,
+      "optionPages": [10],
+      "englishText": "If 60% of a number is added to 36, gives the number itself then the number is.",
+      "hindiTextRaw": ";fn fdlh la[;k dk 60»] 36 esa tksM+us ij ogha la[;k çkIr gks tk, rks og la[;k gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "90" },
+        { "label": "b", "text": "100" },
+        { "label": "c", "text": "75" },
+        { "label": "d", "text": "80" }
+      ],
+      "handwrittenAnswer": {
+        "result": "90",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 10
+      },
+      "handwrittenSolution": {
+        "transcription": "N × 60% + 36 = N; 36 = N − 3N/5 = 2N/5; N = 18 × 5 = 90. Alternate: 60% + 40% = 100%; 40% = 2/5 of N; 2 units → 36; 1 unit → 18; original 5 units → 90.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [10]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q23",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 26,
+      "sourceQuestionNumber": 23,
+      "questionPage": 10,
+      "optionPages": [10],
+      "englishText": "When 106 is subtracted from a number, it reduces to its 47%. What is 11.5% of that number?",
+      "hindiTextRaw": "fdlh la[;k esa ls 106 ?kVkus ij og 47» jg tkrh gSA ml la[;k dk 11-5» D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "13" },
+        { "label": "b", "text": "31" },
+        { "label": "c", "text": "23" },
+        { "label": "d", "text": "32" }
+      ],
+      "handwrittenAnswer": {
+        "result": "23",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 10
+      },
+      "handwrittenSolution": {
+        "transcription": "100% − 53% = 47%; 53% → 106; 1% → 106/53 = 2; 11.5% → 11.5 × 2 = 23.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [10]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q24",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 27,
+      "sourceQuestionNumber": 24,
+      "questionPage": 10,
+      "optionPages": [10],
+      "englishText": "50% of a number is 21 less than 4/5th of that number. Find the number.",
+      "hindiTextRaw": "fdlh la[;k dk 50» ml la[;k ds 4/5 osa Hkkx ls 21 de gSA la[;k Kkr dhft,A",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "40" },
+        { "label": "b", "text": "70" },
+        { "label": "c", "text": "60" },
+        { "label": "d", "text": "50" }
+      ],
+      "handwrittenAnswer": {
+        "result": "70",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 10
+      },
+      "handwrittenSolution": {
+        "transcription": "4/5 = 80%; 80% − 50% = 30%; 30% → 21; 1 unit of 10% → 7; original 10 units → 70. Alternate algebra shown: N × 4/5 − N × 50% = 21; 3N/10 = 21; N = 70.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [10]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q25",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 28,
+      "sourceQuestionNumber": 25,
+      "questionPage": 11,
+      "optionPages": [11],
+      "englishText": "40% of a number is 46 less than 4/5 of that number, find the number.",
+      "hindiTextRaw": "fdlh la[;k dk 40» ml la[;k ds 4/5 ls 46 de gS] la[;k Kkr dhft,A",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "110" },
+        { "label": "b", "text": "105" },
+        { "label": "c", "text": "115" },
+        { "label": "d", "text": "85" }
+      ],
+      "handwrittenAnswer": {
+        "result": "115",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 11
+      },
+      "handwrittenSolution": {
+        "transcription": "4/5 = 80%; 80% − 40% = 40%; 40% = 2 units → 46; 1 unit → 23; original 5 units → 5 × 23 = 115.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [11]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q26",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 29,
+      "sourceQuestionNumber": 26,
+      "questionPage": 11,
+      "optionPages": [11],
+      "englishText": "A number when 35 subtracted from a number it is reduced to 80% of itself. What is 4/5th part of the number?",
+      "hindiTextRaw": "fdlh la[;k esa ls 35 ?kVkus ij og la[;k [kqn dh 80» jg tkrh gSA la[;k dk 4/5 ok¡ Hkkx D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "90" },
+        { "label": "b", "text": "120" },
+        { "label": "c", "text": "140" },
+        { "label": "d", "text": "70" }
+      ],
+      "handwrittenAnswer": {
+        "result": "140",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 11
+      },
+      "handwrittenSolution": {
+        "transcription": "100% − 20% = 80%; 20% = 1/5. 1 unit → 35; original 5 units → 35 × 5 = 175; original × 4/5 = 175 × 4/5 = 140. Alternate: 20% → 35; 1% → 35/20; 80% → (35/20) × 80 = 140.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [11]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q10",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 30,
+      "sourceQuestionNumber": 10,
+      "questionPage": 11,
+      "optionPages": [11],
+      "englishText": "If 170% of a number added to 66 then the result becomes equal to twice of the number, what is the number?",
+      "hindiTextRaw": ";fn fdlh la[;k dk 170»] 66 esa tksM+k tk, rks ifj.kke ml la[;k ds nksxqus ds cjkcj gks tkrk gS] og la[;k D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "200" },
+        { "label": "b", "text": "220" },
+        { "label": "c", "text": "210" },
+        { "label": "d", "text": "236" }
+      ],
+      "handwrittenAnswer": {
+        "result": "220",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 12
+      },
+      "handwrittenSolution": {
+        "transcription": "N × 170% + 66 = N × 2; 170% + 30% = 200%; 30% = 3/10 → original number; 3 units → 66; 1 unit → 22; original 10 units → 220.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [12]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q09",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 31,
+      "sourceQuestionNumber": 9,
+      "questionPage": 12,
+      "optionPages": [12],
+      "englishText": "By what number must the given number be multiplied to increase the number by 25%.",
+      "hindiTextRaw": "nh xbZ la[;k dks 25 çfr'kr rd c<+kus ds fy, nh xbZ la[;k dks fdl la[;k ls xq.kk djuk pkfg,\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "3" },
+        { "label": "b", "text": "3/4" },
+        { "label": "c", "text": "5/4" },
+        { "label": "d", "text": "2/5" }
+      ],
+      "handwrittenAnswer": {
+        "result": "5/4",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 12
+      },
+      "handwrittenSolution": {
+        "transcription": "N × q = N × 125%; q = 5/4.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [12]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q27",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 32,
+      "sourceQuestionNumber": 27,
+      "questionPage": 12,
+      "optionPages": [12],
+      "englishText": "If one-fourth of half of a number is 25, then 20% of that number is?",
+      "hindiTextRaw": ";fn fdlh la[;k ds vk/s dk ,d&pkSFkkbZ Hkkx 25 gS] rks ml la[;k dk 20» D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "40" },
+        { "label": "b", "text": "80" },
+        { "label": "c", "text": "20" },
+        { "label": "d", "text": "60" }
+      ],
+      "handwrittenAnswer": {
+        "result": "40",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "a",
+        "sourcePage": 12
+      },
+      "handwrittenSolution": {
+        "transcription": "N × 1/2 × 1/4 = 25; N = 25 × 8 = 200; N × 20% = 200 × 1/5 = 40.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [12]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q28",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 33,
+      "sourceQuestionNumber": 28,
+      "questionPage": 12,
+      "optionPages": [12],
+      "englishText": "If the difference between a number and its 25% is 24, then the number is?",
+      "hindiTextRaw": ";fn fdlh la[;k vkSj mlds 25» ds chp dk varj 24 gS] rks og la[;k D;k gS\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "28" },
+        { "label": "b", "text": "32" },
+        { "label": "c", "text": "40" },
+        { "label": "d", "text": "34" }
+      ],
+      "handwrittenAnswer": {
+        "result": "32",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 12
+      },
+      "handwrittenSolution": {
+        "transcription": "N − N × 25% = 24; N − N/4 = 24; 3N/4 = 24; N = 32. Alternate diagram: 100% − 25% = 75%; 3 units → 24; 1 unit → 8; original 4 units → 32.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [12]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q29",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 34,
+      "sourceQuestionNumber": 29,
+      "questionPage": 13,
+      "optionPages": [13],
+      "englishText": "40% of the first number is 12 and 50% of the second number is 24. The ratio of the first number to the second number is.",
+      "hindiTextRaw": "igyh la[;k dk 40»] 12 gS vkSj nwljh la[;k dk 50»] 24 gSA igyh la[;k dk nwljh la[;k ls vuqikr gSA",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "8 : 5" },
+        { "label": "b", "text": "4 : 5" },
+        { "label": "c", "text": "5 : 8" },
+        { "label": "d", "text": "1 : 2" }
+      ],
+      "handwrittenAnswer": {
+        "result": "5 : 8",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "c",
+        "sourcePage": 13
+      },
+      "handwrittenSolution": {
+        "transcription": "N1 × 2/5 = 12; N1 = 30. N2 × 1/2 = 24; N2 = 48. N1:N2 = 30:48 = 5:8.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [13]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    },
+    {
+      "id": "percentage-class4-fraction-q30",
+      "sectionLabel": "FRACTION",
+      "sourceOrder": 35,
+      "sourceQuestionNumber": 30,
+      "questionPage": 13,
+      "optionPages": [13],
+      "englishText": "A team wins 45 games, which was 60% of played games. How many games were played by team?",
+      "hindiTextRaw": ",d Vhe 45 xse thrrh gS] tks [ksys x, xse dk 60» gSA Vhe us fdrus xse [ksys\\",
+      "hindiTextStatus": "NEEDS-REVIEW",
+      "options": [
+        { "label": "a", "text": "50 games" },
+        { "label": "b", "text": "75 games" },
+        { "label": "c", "text": "60 games" },
+        { "label": "d", "text": "65 games" }
+      ],
+      "handwrittenAnswer": {
+        "result": "75 games",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "SOURCE-VERIFIED",
+        "verifiedOptionLabel": "b",
+        "sourcePage": 13
+      },
+      "handwrittenSolution": {
+        "transcription": "60% = 3/5 → total games. 3 units → 45; 1 unit → 45/3 = 15; total 5 units → 15 × 5 = 75 games.",
+        "sourceStatus": "SOURCE-PROVIDED",
+        "reviewStatus": "NEEDS-REVIEW",
+        "sourcePages": [13]
+      },
+      "reviewStatus": "NEEDS-REVIEW",
+      "difficulty": null
+    }
+  ]
+}

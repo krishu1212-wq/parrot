@@ -1,0 +1,528 @@
+ARISE MASTER UPGRADE — IMPLEMENT ALL APPROVED FEATURES
+
+You are working on my existing ARISE: The Solo Leaving study app.
+
+IMPORTANT:
+- Do NOT rebuild the app from scratch.
+- Do NOT delete, reset, replace, or corrupt existing study data/progress.
+- Preserve all currently working features, navigation, XP, levels, streaks, quests, Maths progress, NCERT progress, Black Book progress, Practice, Coach, Boss Tests, Recovery, Lecture Tracker, Phase 2 locks, animations, persistence, and existing study store.
+- Before changing architecture, inspect the existing code and understand the current state.
+- Make changes incrementally and create checkpoints.
+- Do not invent fake completion states.
+- After implementation, run typecheck/tests and verify the Preview.
+- Keep the app Android-friendly and performant.
+- Do not add unrelated features beyond this request.
+
+==================================================
+1. FIRST-LAUNCH INTRO + GOOGLE SIGN-IN
+==================================================
+
+Create a polished first-launch ARISE onboarding flow.
+
+First launch:
+- Dark futuristic ARISE intro screen.
+- ARISE logo/title.
+- Subtle original System-style animation/glow.
+- Short motivating introduction.
+- "Begin Your Journey" / "Get Started" action.
+- Then Google Sign-In.
+
+Authentication:
+- Add "Continue with Google".
+- Use a proper secure authentication flow supported by the current Replit/project architecture.
+- Do NOT ask users for or store Google passwords.
+- Each authenticated user must have a unique stable user ID.
+- Link study progress to that user ID.
+- Existing users should recover their existing cloud-saved progress after login.
+- New users should receive a clean initial ARISE profile.
+- Never overwrite newer progress with older/local progress.
+- Handle loading, login failure, logout, and retry states gracefully.
+
+Cloud persistence:
+- Persist important user progress by account:
+  Level, XP, rank, streak, quests, Maths progress, NCERT progress,
+  vocabulary progress, practice history, achievements, Boss Test history,
+  Journey Map progress, Weakness Radar data, and other existing study progress.
+- Preserve local/offline behavior where the current app supports it.
+- Use safe migration/merge logic between local and cloud state.
+- Do not erase existing anonymous/local progress during authentication.
+- If authentication/backend credentials are unavailable in the current environment, implement the architecture cleanly and clearly identify the required configuration instead of creating fake authentication.
+
+==================================================
+2. DAILY MISSION BRIEFING
+==================================================
+
+When the user opens ARISE, provide a cinematic but quick System-style Daily Mission Briefing.
+
+Show:
+- Today's missions/quests
+- Estimated training/study time
+- Current streak
+- Priority order
+- Current XP/level
+- Important pending mission
+- "BEGIN MISSION" action
+
+The briefing must use the actual existing quest/study state.
+
+Integrate it with the existing Next Best Action system.
+
+Do not make the user repeatedly watch the briefing every time they navigate around the app; it should primarily appear at appropriate app/session entry.
+
+==================================================
+3. WEAKNESS RADAR
+==================================================
+
+Create an academic-performance-only Weakness Radar.
+
+Use real available study data such as:
+- Practice accuracy
+- Mistakes
+- Boss Test results
+- Topic performance
+- Lecture/topic progress
+- Repeated incorrect answers where data exists
+
+Identify weak academic topics.
+
+Example:
+WEAK AREA DETECTED
+Percentage
+Accuracy: 58%
+Recent mistakes: 7
+
+Recommended:
+1. Concept revision
+2. 10 practice questions
+3. Re-test
+
+Integrate Weakness Radar with:
+- Next Best Action
+- Practice
+- Boss Tests
+- Lecture Tracker where applicable
+- Study Journey
+
+Never fabricate accuracy or performance when insufficient data exists.
+Clearly show when there is not enough data.
+
+==================================================
+4. FOCUS MODE / MISSION MODE
+==================================================
+
+When the user presses BEGIN MISSION:
+
+Open a distraction-free Mission Mode.
+
+Show:
+- Current mission only
+- Study/session timer
+- Live mission progress
+- Current task
+- XP/reward
+- Optional Do Not Disturb reminder/instruction
+- Quick access to AI Coach
+- Completion action
+
+When the mission ends:
+- Show session summary
+- Study time
+- Completed task
+- Accuracy when applicable
+- XP gained
+- Next Best Action
+
+Connect it to existing quest completion and persistence.
+
+Do not create duplicate XP or duplicate quest completion.
+
+==================================================
+5. STUDY JOURNEY MAP
+==================================================
+
+Create a visual progression map for the user's SSC CGL journey.
+
+Use the actual phase/progress state.
+
+Suggested stages:
+Foundation
+→ Maths
+→ NCERT
+→ Vocabulary
+→ Phase 2
+→ Reasoning
+→ English
+→ Revision
+→ Boss Tests
+
+Each stage should show:
+- Locked/unlocked state
+- Completion percentage
+- Current mission
+- XP earned where applicable
+- Achievements
+- Next Best Action
+
+Phase 2 must remain correctly locked/unlocked according to the existing app's rules.
+
+The map must reflect actual progress, not hardcoded fake percentages.
+
+==================================================
+6. ORIGINAL RANK CROWNS + EMBLEMS
+==================================================
+
+Upgrade the rank presentation.
+
+Create ORIGINAL ARISE artwork for rank emblems/crowns.
+
+Ranks should have increasingly prestigious visual designs.
+
+Examples:
+E → simple emblem
+D/C/B → progressively advanced
+A → elite
+S → legendary
+
+When rank changes:
+- Show an original Rank Ascension animation.
+- Display the new emblem/crown.
+- Award existing rank/XP correctly.
+
+Do NOT copy Solo Leveling anime artwork, logos, characters, screenshots, or copyrighted assets.
+
+==================================================
+7. ORIGINAL WEEKLY BOSS SYSTEM VISUALS
+==================================================
+
+Improve the existing Boss Test presentation.
+
+Create ORIGINAL boss artwork/visuals.
+
+Boss screen should show:
+- Boss name
+- Boss level/difficulty
+- HP/progress bar if appropriate
+- Threat/status indicator
+- Weekly weakness based on real Weakness Radar data when available
+- Boss Test start action
+- Completion/defeat animation
+- XP/reward result
+
+Example style:
+WEEKLY BOSS
+THE CALCULATION WARDEN
+LV. 07
+Weakness: Calculation Speed
+BOSS TEST START
+
+Do not use copied anime characters or artwork.
+
+==================================================
+8. SUBJECT GUARDIANS
+==================================================
+
+Add original visual guardian artwork for study areas where useful:
+
+- Maths Guardian
+- NCERT Guardian
+- Vocabulary Guardian
+- Reasoning Guardian
+- English Guardian
+
+Use them as visual representatives on the Study Journey Map, subject screens, or appropriate cards.
+
+Keep the visuals original and consistent with ARISE.
+
+==================================================
+9. AWAKENING / PHASE UNLOCK
+==================================================
+
+When Phase 2 or another legitimate progression milestone unlocks:
+
+Show a cinematic System-style sequence:
+
+SYSTEM UPDATE
+NEW PATH UNLOCKED
+
+Then show the actual unlocked subject/path.
+
+Use:
+- Glow
+- Original emblem/artwork
+- Smooth animation
+- Existing sound system if already available
+- Reduced-motion fallback
+
+Do not unlock content incorrectly.
+
+==================================================
+10. RPG STATUS WINDOW
+==================================================
+
+Create a polished ARISE Status Window.
+
+Show actual user data:
+- ARISE profile
+- Level
+- Rank
+- XP
+- Streak
+- Maths progress
+- NCERT progress
+- Vocabulary progress
+- Phase status
+- Relevant achievements
+
+Use a futuristic RPG/System-style panel.
+
+==================================================
+11. ENHANCED QUEST CARDS
+==================================================
+
+Upgrade existing quest cards visually.
+
+Each quest can show:
+- Original icon/art
+- Quest title
+- Difficulty
+- XP reward
+- Progress
+- Locked/unlocked state
+- Completion state
+- Appropriate System animation
+
+Preserve the existing quest logic and prevent duplicate completion/rewards.
+
+==================================================
+12. CINEMATIC SYSTEM NOTIFICATIONS
+==================================================
+
+Improve existing System notifications.
+
+Examples:
+[SYSTEM]
+NEW QUEST DETECTED
+
+[SYSTEM]
+RANK ASCENSION AVAILABLE
+
+[SYSTEM]
+WEEKLY BOSS DETECTED
+
+Use:
+- Glow
+- Translucent panels
+- Subtle motion
+- Original ARISE visual identity
+
+Do not make notifications annoying or block the user's workflow.
+
+==================================================
+13. ACHIEVEMENT RELICS / BADGES
+==================================================
+
+Create original achievement artwork/relics.
+
+Examples:
+- 7-Day Streak
+- 30-Day Streak
+- First Boss Defeat
+- 100 Lectures
+- NCERT Master
+- Vocabulary Master
+
+Only unlock achievements when their real conditions are satisfied.
+
+Do not award fake achievements.
+
+==================================================
+14. MAJOR HOME SCREEN VISUAL OVERHAUL
+==================================================
+
+This is very important.
+
+The current Home screen feels too much like plain text with only a couple of colors.
+
+Transform it into a polished ORIGINAL dark-futuristic/dark-fantasy ARISE System dashboard.
+
+Keep all existing Home functionality, but improve the visual hierarchy.
+
+Add:
+
+- Dark futuristic background
+- Subtle animated particles
+- Ambient glow
+- Animated System Core centerpiece
+- Original ARISE rank crown/emblem
+- Original ARISE character/guardian-style artwork where appropriate
+- RPG-style Level/XP/Rank panel
+- Streak display
+- Today's Mission/Boss/Quest cards with visuals
+- Daily Mission Briefing
+- Study Journey progress
+- Weakness Radar / Next Best Action
+- Achievements/relics
+- Phase progress
+- Next unlock
+- Smooth entrance animations
+- XP gain animations
+- Quest completion animations
+- Level-up animation
+- Rank-up animation
+- Phase unlock animation
+
+The Home screen should feel like opening a personal "System", not a normal educational dashboard.
+
+Use layered depth:
+- background
+- ambient glow
+- artwork
+- glass/translucent panels
+- foreground information
+
+Avoid making everything neon or visually noisy.
+
+Use a coherent ARISE visual language:
+dark futuristic base + luminous cyan/blue energy + restrained secondary accents.
+
+Do not rely on only two flat colors.
+
+==================================================
+15. ORIGINAL ART DIRECTION
+==================================================
+
+Create/use only ORIGINAL ARISE artwork.
+
+Allowed visual direction:
+- dark fantasy
+- futuristic RPG
+- mysterious System interface
+- glowing energy
+- original crowns
+- original bosses
+- original guardians
+- original relics
+- original symbols
+
+NOT allowed:
+- copied Solo Leveling characters
+- copied anime screenshots
+- copied logos
+- copied UI
+- copyrighted artwork recreated too closely
+
+ARISE should feel inspired by the general dark-fantasy/RPG/System atmosphere while having its own identity.
+
+==================================================
+16. PERFORMANCE + ACCESSIBILITY
+==================================================
+
+All visual effects must remain Android-friendly.
+
+- Avoid unnecessarily heavy animations.
+- Optimize images/assets.
+- Avoid memory leaks.
+- Use lightweight animation techniques.
+- Support reduced-motion behavior where practical.
+- Keep touch targets usable.
+- Keep text readable.
+- Preserve smooth scrolling.
+- Do not let visual effects interfere with buttons.
+
+==================================================
+17. DATA SAFETY / REGRESSION REQUIREMENTS
+==================================================
+
+This is critical.
+
+Before and after changes verify:
+
+- Existing user progress remains intact.
+- Existing Maths progress remains intact.
+- Existing NCERT progress remains intact.
+- Existing Black Book progress remains intact.
+- Existing XP/levels/streaks remain intact.
+- Existing quest completion remains intact.
+- Existing Phase 2 rules remain intact.
+- Existing Lecture Tracker remains intact.
+- Existing Boss Test functionality remains intact.
+- Existing Coach remains intact.
+- Existing animations remain intact.
+- Existing persistence remains intact.
+- Existing batch/lecture data remains intact.
+
+Do not reset the existing seeded/local study state.
+
+Test:
+- Reload
+- App restart
+- Login/logout where authentication is configured
+- New user state
+- Existing user state
+- Malformed storage
+- Missing cloud data
+- Offline/local fallback where supported
+- Returning to app
+- Quest completion
+- XP reward
+- Rank progression
+- Phase unlock
+- Boss Test
+- Weakness Radar
+- Focus Mode
+- Journey Map
+
+If a regression is found, fix it before final handoff.
+
+==================================================
+18. BATCH / LECTURE STRUCTURE MUST REMAIN DYNAMIC
+==================================================
+
+Important existing requirement:
+
+My current Maths/Reasoning/English batch will eventually end and I may purchase a different batch.
+
+Therefore:
+- Do NOT hardcode the current exact number of lectures/topics as permanent architecture.
+- Support multiple batches/sources.
+- Allow topic/lecture counts to change between batches.
+- Allow topics to be added/removed/renamed safely.
+- Preserve completed history from an old batch.
+- New batch can have different lecture counts.
+- Existing Lecture Tracker must continue supporting multiple sources.
+- Progress must be batch-aware.
+- Do not assume every batch has the same syllabus structure.
+
+==================================================
+19. FINAL VERIFICATION
+==================================================
+
+After implementing everything:
+
+1. Run typecheck.
+2. Run relevant tests.
+3. Start/verify the Expo workflow.
+4. Verify API workflow if required.
+5. Open the browser/mobile Preview.
+6. Test the Home screen.
+7. Test onboarding/auth flow.
+8. Test Daily Mission Briefing.
+9. Test Focus/Mission Mode.
+10. Test Weakness Radar.
+11. Test Study Journey Map.
+12. Test Rank/Boss/Guardian visuals.
+13. Test quest completion and XP.
+14. Test persistence/reload.
+15. Confirm no existing study progress was reset.
+16. Fix any real blocking errors.
+17. Create a checkpoint.
+18. Give me a concise final report listing:
+   - Implemented
+   - Tested
+   - Any remaining non-blocking issue
+   - Any configuration I still need to provide
+
+Do not stop after making only UI changes. Verify the actual flows and data behavior.
+
+MOST IMPORTANT:
+Preserve the existing ARISE app and its study data. Upgrade it; do not replace it.

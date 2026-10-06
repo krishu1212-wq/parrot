@@ -1,0 +1,178 @@
+:root {
+  --arise-night: #070c16;
+  --arise-panel: #0d1a2e;
+  --arise-ink: #f2f6ff;
+  --arise-muted: #8ea6c5;
+  --arise-cyan: #70e7ff;
+  --arise-gold: #e4c27a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.arise-level-preview {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--arise-ink);
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(112, 231, 255, 0.08), transparent 58%),
+    #05070f;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.arise-level-surface {
+  width: min(100%, 390px);
+  padding: 16px;
+  border: 1px solid rgba(112, 231, 255, 0.2);
+  background: linear-gradient(145deg, rgba(13, 26, 46, 0.94), rgba(7, 12, 22, 0.98));
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.32), inset 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.arise-level-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(112, 231, 255, 0.25);
+  background: var(--arise-night);
+}
+
+.arise-level-crown {
+  display: block;
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
+}
+
+.arise-level-name {
+  color: var(--arise-ink);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.arise-level-xp {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 0;
+}
+
+.arise-level-xp-total {
+  color: var(--arise-gold);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.arise-level-xp-caption {
+  margin-top: 3px;
+  color: var(--arise-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+}
+
+.arise-level-row-refined {
+  gap: 4px;
+}
+
+.arise-level-crown-refined {
+  transform: scale(1.14);
+  filter: drop-shadow(0 0 7px rgba(112, 231, 255, 0.22));
+}
+
+.arise-level-surface-refined {
+  padding: 0;
+}
+
+.arise-level-name-plate {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  min-width: 120px;
+  min-height: 46px;
+  flex-shrink: 0;
+  padding: 0 7px;
+  border: 1px solid rgba(112, 231, 255, 0.2);
+  border-left: 3px solid var(--arise-gold);
+  background: linear-gradient(100deg, rgba(112, 231, 255, 0.08), rgba(112, 231, 255, 0.025));
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+
+.arise-level-xp-divider {
+  flex: 0 0 1px;
+  height: 40px;
+  background: rgba(228, 194, 122, 0.28);
+}
+
+.arise-level-xp-refined {
+  max-width: 36%;
+}
+
+.arise-level-xp-caption-refined {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.arise-level-name-plate .arise-level-name {
+  flex-shrink: 0;
+}
+
+@media (max-width: 380px) {
+  .arise-level-preview {
+    padding: 16px;
+  }
+
+  .arise-level-surface {
+    padding: 12px;
+  }
+
+  .arise-level-row {
+    gap: 8px;
+  }
+
+  .arise-level-crown {
+    flex-basis: 70px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .arise-level-name {
+    font-size: 18px;
+  }
+
+  .arise-level-xp-total {
+    font-size: 18px;
+  }
+
+  .arise-level-xp-caption {
+    font-size: 9px;
+    letter-spacing: 0.6px;
+  }
+
+  .arise-level-crown-refined {
+    flex: 0 0 80px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .arise-level-name-plate {
+    min-width: 120px;
+    min-height: 46px;
+    padding: 0 7px;
+  }
+
+  .arise-level-name-plate .arise-level-name,
+  .arise-level-xp-refined .arise-level-xp-total {
+    font-size: 20px;
+  }
+}

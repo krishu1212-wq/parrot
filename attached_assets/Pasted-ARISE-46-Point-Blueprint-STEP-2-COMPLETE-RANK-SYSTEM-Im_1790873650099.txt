@@ -1,0 +1,128 @@
+ARISE 46-Point Blueprint — STEP 2: COMPLETE RANK SYSTEM
+
+Implement ONLY Blueprint Points 2 and 46.
+
+Required final progression:
+
+E → D → C → B → A → S → SS → SSS → Hidden/Transcendent
+
+IMPORTANT:
+- This is a NEW implementation task. Do not use or continue the old Google-cloud verification task.
+- Preserve all existing user XP, level, study progress, quests, achievements, lectures, NCERT, vocabulary, calculation, Boss data, and batches.
+- Never reset existing data.
+- Do not fabricate historical rank transitions.
+- Do NOT implement Gates, Inventory, Equipment, Sound, Cinematic Opening, or unrelated features in this step.
+
+1. COMPLETE RANK PROGRESSION
+Replace the current incomplete runtime rank calculation with one authoritative centralized rank system containing exactly:
+
+E
+D
+C
+B
+A
+S
+SS
+SSS
+Hidden/Transcendent
+
+2. RANK DEFINITIONS
+Create a centralized rank definition/configuration containing for every rank:
+- stable rank ID
+- display name
+- deterministic XP/level requirement
+- crown/emblem variant
+- visual/aura tier
+- rank-up announcement
+- future unlock metadata/hooks
+
+Document the exact thresholds used.
+
+Use the existing XP/level progression as the foundation and make the calculation deterministic.
+
+3. BACKWARD COMPATIBILITY
+Existing users must retain:
+- XP
+- level
+- study progress
+- achievements
+- all other saved data
+
+Recalculate their rank from their real saved progression using the new centralized rules.
+
+4. MULTI-LETTER RANKS
+Fix artwork selection so:
+- SS uses SS artwork
+- SSS uses SSS artwork
+- Hidden/Transcendent uses its own artwork
+
+Never select artwork by only the first character of the rank string.
+
+5. RANK TRANSITION
+When real progression crosses a rank threshold:
+- detect the new rank
+- show the existing rank-up presentation
+- create exactly one durable rank-change history event
+- prevent duplicate events after reload
+
+Rank history should contain:
+- previous rank
+- new rank
+- timestamp
+- progression value
+- stable idempotency/event ID
+
+Do not create fake historical transitions for existing users.
+
+6. VISUALS
+Keep the existing ARISE futuristic style.
+
+Create distinct original visual treatment for:
+- E/D/C/B/A
+- S
+- SS
+- SSS
+- Hidden/Transcendent
+
+Do not copy Solo Leveling artwork, logos, sounds, or copyrighted assets.
+
+7. FUTURE UNLOCK HOOKS
+Expose rank unlock metadata/hooks for future Gate, Inventory, Equipment and other systems.
+
+Do NOT implement those systems yet.
+
+8. SAFETY / DATA INTEGRITY
+Unknown or malformed rank data must not crash the app.
+Use safe fallback behavior.
+Do not destructively migrate existing progress.
+
+9. TESTS
+Add and run tests for:
+- all nine ranks
+- exact rank ordering
+- threshold just below
+- threshold exactly at
+- threshold just above
+- SS artwork
+- SSS artwork
+- Hidden/Transcendent artwork
+- existing XP/progress preservation
+- rank transition idempotency
+- reload persistence
+- malformed/unknown rank handling
+
+Also search the existing codebase for all old E → B → A → S rank logic and replace/remove duplicate authoritative calculations.
+
+10. VERIFICATION
+Run the relevant existing tests plus all new rank tests.
+
+At the end report:
+- files changed
+- exact thresholds implemented
+- location of the authoritative rank calculation
+- tests executed and results
+- confirmation that existing user progress was preserved
+- remaining limitations
+
+STOP after Points 2 and 46.
+Do not implement any other blueprint points.

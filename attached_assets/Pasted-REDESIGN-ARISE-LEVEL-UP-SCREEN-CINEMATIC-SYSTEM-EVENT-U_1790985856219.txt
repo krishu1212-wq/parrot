@@ -1,0 +1,471 @@
+REDESIGN ARISE LEVEL-UP SCREEN — CINEMATIC SYSTEM EVENT
+
+Use the attached Level-Up reference image as the EXACT visual direction and quality target.
+
+IMPORTANT:
+- Recreate the same overall visual hierarchy, composition, atmosphere, richness, glow, spacing, and cinematic feeling shown in the reference.
+- Do NOT copy copyrighted anime characters, logos, artwork, or assets.
+- Use ORIGINAL ARISE artwork and original System/Guardian-style imagery.
+- Keep all existing real Level/XP/Rank/achievement data and logic.
+- Do NOT change study logic, persistence, XP calculations, or progression rules.
+- This is a UI/animation/audio overhaul only.
+
+==================================================
+1. OVERALL VISUAL STYLE
+==================================================
+
+Create a premium cinematic RPG/System Level-Up screen.
+
+Visual identity:
+- Deep black/navy futuristic background
+- Electric blue and cyan energy
+- White highlights
+- Gold/yellow for LEVEL UP and important rewards
+- Purple accents where appropriate
+- Green for completed achievements
+- Subtle red only for warning/status elements
+- Holographic glass panels
+- Metallic borders
+- Hexagonal/angular UI
+- Energy particles
+- Floating shards/crystals
+- Atmospheric mist
+- Lightning/energy arcs
+- Strong depth with background + midground + foreground layers
+- High contrast and excellent readability
+- Premium game UI feeling
+
+The screen must NOT look like a simple blue rectangle with text.
+
+==================================================
+2. TOP HERO AREA
+==================================================
+
+Create a large cinematic original ARISE System artwork in the upper portion.
+
+Use:
+- Original silhouetted System/Hunter-style character or ARISE guardian
+- Futuristic ruined environment
+- Floating blue energy
+- Crystals/shards
+- Atmospheric particles
+- Lightning
+- Strong backlight
+- Cyan energy aura
+
+Place:
+ARISE
+STUDY SYSTEM
+
+as a small premium logo/brand element.
+
+Add subtle animated environmental movement.
+
+==================================================
+3. LEVEL-UP TITLE
+==================================================
+
+Create a dramatic central title:
+
+LEVEL UP
+
+with:
+
+CONGRATULATIONS
+
+Visual:
+- Large premium typography
+- Gold/white gradient appearance
+- Strong outer glow
+- Metallic effect
+- Thin energy lines surrounding the title
+- Small crown/system emblem above it
+
+Animation:
+1. Screen briefly darkens.
+2. Energy gathers toward the center.
+3. Bright flash.
+4. Crown/emblem appears.
+5. LEVEL UP scales from ~80% to 100%.
+6. Gold/cyan glow expands outward.
+7. CONGRATULATIONS fades in.
+8. Small particles burst outward.
+
+Do NOT make the animation too fast.
+
+==================================================
+4. LEVEL CORE
+==================================================
+
+Create a large futuristic circular/hexagonal Level Core.
+
+Example:
+
+Lv
+4
+
+The actual level must come from the existing player data.
+
+Visual:
+- Large glowing number
+- Cyan energy ring
+- Gold inner highlights
+- Angular metallic frame
+- Crystal/wing-like original energy decorations
+- Pulsing aura
+
+Animation:
+- Energy ring rotates slowly.
+- Outer ring pulses.
+- Level number appears with a light burst.
+- Small particles orbit the core.
+- Glow intensity briefly increases when revealed.
+
+==================================================
+5. MESSAGE PANEL
+==================================================
+
+Add a holographic glass message panel:
+
+"You are getting stronger.
+Keep going."
+
+Use the existing ARISE tone.
+
+Animation:
+- Panel materializes with scan-line effect.
+- Text fades in character-by-character or smoothly.
+- Subtle holographic flicker.
+
+==================================================
+6. REWARDS UNLOCKED
+==================================================
+
+Create a premium holographic section:
+
+REWARDS UNLOCKED
+
+Display actual earned rewards from the existing reward system.
+
+Use visually rich item cards instead of plain text.
+
+Possible original in-app rewards:
+- XP Crystal
+- Streak reward
+- Focus Potion (fictional in-app item)
+- Study Coins
+- Relic Fragment
+- Revision Token
+- Gate Key
+- Reward Chest
+
+Each reward must have:
+- Original icon/art
+- Rarity frame
+- Item name
+- Quantity/effect
+- Glow appropriate to rarity
+
+Rarity system:
+COMMON
+RARE
+EPIC
+LEGENDARY
+MYTHIC
+
+Animation:
+- Reward container appears.
+- Cards reveal one by one.
+- Each card has a small burst/glow.
+- Rare+ items receive stronger particle effects.
+- Legendary/Mythic items receive special golden/purple aura.
+- Add subtle floating animation.
+
+Do not fabricate rewards. Only display rewards actually granted by the existing game logic.
+
+==================================================
+7. PROGRESS TO NEXT LEVEL
+==================================================
+
+Create a premium holographic progress panel.
+
+Display:
+
+PROGRESS TO NEXT LEVEL
+Lv 5
+
+Actual XP:
+CURRENT XP / REQUIRED XP
+
+and percentage.
+
+Progress bar:
+- Cyan energy core
+- Animated flowing energy
+- Small particles moving along the bar
+- Glow increases when XP changes
+
+Use real existing XP data.
+
+==================================================
+8. TODAY'S ACHIEVEMENT
+==================================================
+
+Create:
+
+TODAY'S ACHIEVEMENT
+
+with actual completed activities.
+
+Examples:
+- Maths
+- NCERT Reading
+- Vocabulary
+- Calculation
+- Mock Test
+
+Each card:
+- Original icon
+- Completion value
+- Green completion indicator
+- Small cyan/green glow
+
+Animation:
+- Completed cards reveal sequentially.
+- Checkmark draws in.
+- Small green/cyan particle burst.
+
+Do not create fake completion data.
+
+==================================================
+9. CONTINUE BUTTON
+==================================================
+
+Create a large premium futuristic:
+
+CONTINUE →
+
+button.
+
+Design:
+- Angular/hexagonal frame
+- Cyan energy border
+- Holographic glass interior
+- Strong but tasteful glow
+- White typography
+
+Idle animation:
+- Slow breathing glow
+- Energy traveling around the border
+
+Press animation:
+- Button compresses slightly
+- Bright cyan flash
+- Small particle burst
+- Soft haptic feedback if available
+- Then continue to the correct next screen.
+
+==================================================
+10. SOUND EFFECTS
+==================================================
+
+Add ORIGINAL or properly licensed sound effects only.
+
+Do NOT use copyrighted anime/game sounds.
+
+Create/use these sound events:
+
+LEVEL_UP_START:
+- deep futuristic system activation tone
+
+LEVEL_UP_REVEAL:
+- bright energy burst
+
+LEVEL_NUMBER_REVEAL:
+- short crystalline/system chime
+
+REWARD_REVEAL:
+- soft futuristic item unlock sound
+
+RARE_REWARD:
+- stronger sparkle/chime
+
+LEGENDARY_REWARD:
+- premium golden unlock sound
+
+ACHIEVEMENT_REVEAL:
+- positive completion tone
+
+CONTINUE:
+- subtle futuristic confirmation sound
+
+Sound settings:
+- Respect the app's global sound ON/OFF setting.
+- Respect volume settings.
+- Never play duplicate sounds during rerenders.
+- Respect reduced-motion/accessibility settings.
+- If sound assets are unavailable, gracefully fall back to silent operation instead of crashing.
+
+==================================================
+11. GLOW + PARTICLE SYSTEM
+==================================================
+
+Add lightweight Android-friendly effects:
+
+- Ambient particles
+- Energy dust
+- Crystal particles
+- Glow pulses
+- Lightning arcs
+- Scanlines
+- Energy rings
+- Reward bursts
+- Button glow
+
+Performance requirements:
+- Keep particle count controlled.
+- Avoid expensive continuous blur operations.
+- Use Reanimated/native-friendly animations where possible.
+- Avoid blocking the JS thread.
+- Reduced Motion must significantly reduce/disable nonessential effects.
+
+==================================================
+12. CINEMATIC SEQUENCE
+==================================================
+
+The complete Level-Up sequence should feel like a premium System event:
+
+0. Current screen briefly darkens.
+
+1. SYSTEM EVENT appears.
+
+2. Energy begins gathering.
+
+3. Background artwork becomes brighter.
+
+4. System emblem/crown appears.
+
+5. LEVEL UP appears with a dramatic reveal.
+
+6. CONGRATULATIONS appears.
+
+7. Level Core activates.
+
+8. New level number is revealed.
+
+9. Energy pulse expands outward.
+
+10. Message panel appears.
+
+11. Rewards section materializes.
+
+12. Rewards reveal one-by-one.
+
+13. XP progress appears.
+
+14. Today's achievements reveal.
+
+15. CONTINUE button activates.
+
+Total animation should feel cinematic but should NOT delay the user excessively.
+
+==================================================
+13. DATA + LOGIC SAFETY
+==================================================
+
+DO NOT modify:
+- XP calculation
+- Level calculation
+- Rank calculation
+- Quest completion
+- Achievement conditions
+- Reward eligibility
+- Persistence
+- Cloud/local save logic
+- Existing navigation logic
+
+The Level-Up screen must consume existing real data.
+
+No mock data.
+
+No duplicated XP.
+
+No duplicated rewards.
+
+No duplicated sound triggers.
+
+The screen must work after app restart.
+
+==================================================
+14. RESPONSIVE ANDROID DESIGN
+==================================================
+
+The reference is only the visual direction.
+
+Implement the screen responsively for:
+- Android phones
+- Small screens
+- Different aspect ratios
+- Safe areas/notches
+- Web preview
+
+All text must remain readable.
+
+Artwork must NEVER cover important text.
+
+Do not use fixed dimensions that break on small Android screens.
+
+==================================================
+15. COMPONENT ARCHITECTURE
+==================================================
+
+Build reusable components where appropriate:
+
+- CinematicBackground
+- SystemEventHeader
+- LevelUpTitle
+- LevelCore
+- RewardReveal
+- RewardCard
+- XPProgressPanel
+- AchievementReveal
+- ContinueButton
+- ParticleLayer
+- EnergyGlow
+- SoundEventController
+
+Avoid unnecessary duplication.
+
+==================================================
+16. FINAL REQUIREMENT
+==================================================
+
+The final result should feel like:
+
+"ARISE — SYSTEM LEVEL UP"
+
+not like a normal mobile form/dialog.
+
+It should feel:
+- cinematic
+- premium
+- futuristic
+- rewarding
+- energetic
+- visually rich
+- original
+- smooth
+- responsive
+- Android-friendly
+
+Use the attached reference image as the visual quality/composition target, while creating completely original ARISE artwork and assets.
+
+After implementation:
+1. Verify Level-Up opens correctly.
+2. Verify real level/XP/rewards are displayed.
+3. Verify rewards are not duplicated.
+4. Verify animations do not crash Android.
+5. Verify sounds respect settings.
+6. Verify reduced-motion mode.
+7. Verify Web still works.
+8. Do not change unrelated features.

@@ -1,0 +1,382 @@
+ARISE 46-Point Blueprint — STEP 3
+GATE + INVENTORY + EQUIPMENT / LOADOUT
+
+Implement ONLY Blueprint Points 9, 15, 16 and the directly required integrations from Points 4 and 3.
+
+IMPORTANT:
+This must be BOTH:
+1. Fully functional/stored RPG systems
+2. Visually rich ARISE System/RPG experience
+
+Do NOT make plain text-only cards or basic CRUD screens.
+
+PRESERVE EXISTING DATA:
+- Never reset existing XP, level, rank, quests, lectures, NCERT, vocabulary, calculation, Boss, achievements, batches or Step 1/2 data.
+- Do not fabricate historical Gate completions or rewards.
+- Do not modify unrelated systems unnecessarily.
+
+==================================================
+A. GATE / DUNGEON SYSTEM — POINT 9
+==================================================
+
+Create a real Gate system with:
+
+Gate types:
+- Normal Gate
+- Difficult Gate
+- Special Gate
+- Boss Gate
+
+Each Gate must have:
+- stable Gate ID
+- name
+- original artwork
+- subject/topic
+- difficulty
+- required Level
+- required Rank
+- time limit
+- reward table
+- lock/unlock state
+- completion state
+- progress
+- attempt/completion history
+
+Create a dedicated Gate screen.
+
+VISUAL REQUIREMENT:
+Make it feel like entering a futuristic RPG dungeon.
+
+Include:
+- large holographic Gate/portal visual
+- animated energy/particles
+- glowing borders
+- difficulty-colored visual treatment
+- Gate status HUD
+- Level/Rank requirement
+- timer
+- reward preview
+- "ENTER GATE" action
+- locked Gate presentation
+- unlock animation
+- Gate entry animation
+- Gate completion animation
+
+Use original ARISE artwork/design.
+Do NOT copy Solo Leveling artwork, logos, sounds or copyrighted assets.
+
+GATE FLOW:
+
+Locked Gate
+→ show requirements
+→ user becomes eligible
+→ unlock notification/effect
+→ Enter Gate
+→ challenge begins
+→ timer/progress
+→ challenge completion
+→ Gate Clear animation
+→ reward reveal
+→ XP/reward processing
+→ history record
+→ inventory update
+
+If a Gate is not completed, do not award its completion rewards.
+
+==================================================
+B. GATE REWARDS
+==================================================
+
+Create real in-app RPG rewards.
+
+Possible reward types:
+
+- XP
+- XP Crystal
+- Life Potion
+- Revision Token
+- Gate Key
+- Relic Fragment
+- Study Coins
+- Reward Chest
+- Quest Item
+- special study boost item
+
+IMPORTANT:
+Life Potion is ONLY a fictional ARISE game item.
+It is NOT real medicine and must not make health/medical claims.
+
+Rewards must:
+- be earned through actual completion
+- be persisted
+- have quantity
+- have stable item IDs
+- avoid duplicate rewards on reload/retry
+- have an idempotency key
+
+Do not create pay-to-win mechanics.
+
+==================================================
+C. INVENTORY — POINT 15
+==================================================
+
+Create a dedicated Inventory screen.
+
+Inventory must support:
+- item ownership
+- quantity
+- item ID
+- item name
+- rarity
+- description
+- category
+- inspect
+- usable/non-usable state
+- use action where applicable
+- acquisition history when available
+
+Categories:
+- Keys
+- Potions
+- Revision
+- Quest Items
+- Relic Fragments
+- XP Items
+- Special Rewards
+
+Create original item artwork/icons.
+
+RARITY SYSTEM:
+- Common
+- Rare
+- Epic
+- Legendary
+- Mythic
+
+Each rarity should have distinct original ARISE visual treatment.
+
+VISUAL REQUIREMENT:
+
+Do NOT make a plain list.
+
+Create:
+- holographic inventory grid
+- item cards
+- rarity glow
+- item icon/art
+- quantity badge
+- inspect modal
+- item reveal animation
+- reward chest opening animation
+- subtle particles/glow
+- selected-item highlight
+
+For Mythic/Legendary items, use stronger but lightweight effects.
+
+Respect reduced-motion settings.
+
+==================================================
+D. EQUIPMENT / LOADOUT — POINT 16
+==================================================
+
+Create an Equipment/Loadout screen.
+
+Support:
+- equip
+- unequip
+- currently equipped items
+- equipment slots
+- item effects
+- loadout persistence
+
+Supported equipment/relic categories:
+
+- XP Boost
+- Quest Modifier
+- Revision Token
+- Boss Entry Item
+- Special Study Boost
+- Achievement Relic
+
+Create balanced effects.
+
+Examples:
+- Scholar Core → small NCERT XP modifier
+- Calculation Gauntlet → small calculation reward modifier
+- Focus Crystal → small Focus reward modifier
+- Revision Relic → improves fictional revision-token efficiency
+
+Do NOT make huge multipliers.
+Do NOT create pay-to-win mechanics.
+
+Effects must be clearly displayed.
+
+VISUAL REQUIREMENT:
+
+Create a futuristic loadout HUD:
+- central holographic loadout area
+- equipment slots
+- equipped relic glow
+- item details panel
+- stat/effect preview
+- equip animation
+- unequip animation
+- rarity visuals
+- subtle particles
+
+==================================================
+E. QUEST / XP INTEGRATION
+==================================================
+
+Integrate Gate rewards with the existing Quest and XP architecture.
+
+Required:
+- Gate completion can award XP
+- Gate completion can award inventory items
+- XP must use the existing duplicate-protection architecture
+- Do not double-award XP
+- Do not double-award items
+- Gate completion must create a durable history event
+- Gate rewards must create appropriate XP/reward history events
+
+Do not rewrite the existing canonical daily quest reward system.
+
+If Gate quests are represented in the quest system, add a distinct Gate quest type without breaking existing daily quests.
+
+==================================================
+F. NOTIFICATIONS / EFFECTS
+==================================================
+
+Use the existing ARISE System notification/animation infrastructure where possible.
+
+Support events such as:
+- NEW GATE AVAILABLE
+- GATE UNLOCKED
+- GATE ENTERED
+- GATE CLEARED
+- REWARD ACQUIRED
+- RARE ITEM ACQUIRED
+- EQUIPMENT EQUIPPED
+
+Do not build the complete notification system here.
+Only wire these Gate/Inventory/Equipment events into existing infrastructure.
+
+==================================================
+G. PERSISTENCE
+==================================================
+
+Persist:
+- Gates
+- Gate unlock state
+- Gate completion state
+- Gate history
+- inventory
+- item quantities
+- item acquisition records
+- equipment/loadout
+- equipped items
+- effect state
+
+Use the existing persistence architecture from Step 1.
+
+Do not replace existing storage destructively.
+
+Legacy users must safely receive empty/default inventory and equipment state if none exists.
+
+Malformed inventory/equipment/Gate data must not crash the app.
+
+==================================================
+H. TESTS
+==================================================
+
+Add and run tests for:
+
+GATE:
+- locked Gate
+- eligible Gate
+- Level requirement
+- Rank requirement
+- Enter Gate
+- Gate completion
+- failed/incomplete Gate
+- timer/progress
+- completion persistence
+- Gate reward idempotency
+
+INVENTORY:
+- item acquisition
+- quantity increment
+- quantity persistence
+- item inspection
+- item use
+- invalid item safety
+- malformed inventory safety
+
+EQUIPMENT:
+- equip
+- unequip
+- persistence
+- effect calculation
+- invalid equipment safety
+- duplicate equip protection
+
+REWARDS:
+- XP reward
+- item reward
+- reward chest
+- duplicate prevention
+- reload persistence
+
+Also run all relevant existing tests.
+
+==================================================
+I. VISUAL QUALITY CHECK
+==================================================
+
+Before finishing, verify that the new screens are NOT plain/default UI.
+
+They should visibly contain:
+- futuristic ARISE HUD
+- holographic panels
+- original item/Gate artwork
+- glow
+- particles/effects where appropriate
+- rarity treatment
+- reward reveal
+- smooth transitions
+- responsive mobile layout
+- reduced-motion support
+
+Keep animations lightweight for Android.
+
+==================================================
+FINAL REPORT
+==================================================
+
+At the end report:
+
+1. Files changed
+2. Gate types implemented
+3. Gate requirements and reward logic
+4. Inventory item system
+5. Rarity system
+6. Equipment/loadout system
+7. Persistence changes
+8. XP/reward duplicate protection
+9. Tests executed and results
+10. Visual/effect implementation
+11. Existing data preservation confirmation
+12. Any limitations
+
+STOP after this step.
+
+Do NOT implement:
+- academic learning systems
+- vocabulary retrieval
+- adaptive NCERT
+- analytics
+- AI Coach expansion
+- Sound System
+- Cinematic Opening
+- Play Store work
+- unrelated blueprint points

@@ -1,0 +1,100 @@
+Add a Dynamic Batch & Lecture Management system to the existing ARISE Study System.
+
+IMPORTANT:
+- Preserve the entire existing ARISE app.
+- Do NOT remove, reset, or overwrite existing study progress/data.
+- Do NOT change the existing UI/design unnecessarily.
+- Do NOT change the existing XP, levels, ranks, quests, streaks, NCERT, Black Book, Practice, Coach, animations, or other features except where integration is required.
+- Do NOT hard-code the current Maths/English/Reasoning lecture counts as permanent values.
+
+GOAL:
+The current batch is temporary. When the user finishes this batch and joins another batch, the number of lectures and topics may increase or decrease. ARISE must support this without requiring code changes.
+
+Create a flexible Batch system:
+
+1. BATCH MANAGEMENT
+- User can create/add a new batch.
+- Each batch has:
+  - Batch name
+  - Source/platform (e.g. Careerwill or another source)
+  - Subject(s)
+  - Optional batch start date
+  - Active/Inactive status
+- Multiple batches must be supported.
+- Keep old batches and their progress instead of deleting them.
+
+2. SUBJECT & TOPIC MANAGEMENT
+For each batch:
+- Maths
+- English
+- Reasoning
+- Allow topics to be added/edited.
+- Each topic can have any number of lectures.
+- Example:
+  Percentage → 15 lectures
+  Algebra → 8 lectures
+- Another batch may have:
+  Percentage → 20 lectures
+  Algebra → 5 lectures
+- Do not assume the lecture counts from my current batch are permanent.
+
+3. LECTURE TRACKER
+Each lecture should support:
+- Lecture title/number
+- Topic
+- Lecture link
+- Not Started
+- In Progress
+- Completed
+- Start Lecture/session tracking
+- Completion marking
+- XP reward
+- Subject progress update
+
+4. PROGRESS
+Calculate progress dynamically:
+completed lectures / total lectures
+
+Never use a fixed total lecture count.
+
+If a new lecture is added, total automatically increases.
+If a topic has fewer lectures, total automatically decreases accordingly.
+
+5. BATCH SWITCHING
+- User can switch between batches.
+- Switching batches must not erase previous progress.
+- Show the currently active batch clearly.
+- Progress shown on Maths/English/Reasoning should correspond to the selected batch.
+
+6. NEXT BEST ACTION
+Integrate the dynamic lecture system with the existing "Next Best Action".
+It should recommend the next incomplete lecture from the currently active batch.
+
+7. EXISTING DATA
+Treat the current Maths/English/Reasoning lecture data as the CURRENT BATCH data.
+Do not delete it.
+Do not replace it with sample data.
+Preserve its existing completion/progress state.
+
+8. FUTURE-PROOF DESIGN
+The system should allow me to add:
+- New batch
+- New subject
+- New topic
+- New lecture
+without modifying the source code.
+
+9. DATA PERSISTENCE
+All batches, topics, lectures, completion status, links, and progress must persist after closing/reopening the app.
+
+10. SAFETY CHECK
+Before making changes, inspect the existing data model and integrate this feature with it rather than creating a duplicate lecture/progress system.
+
+After implementation:
+- Verify the existing ARISE app still works.
+- Verify current lecture progress is preserved.
+- Verify a second test batch can be created with different lecture counts.
+- Verify switching between batches preserves both batches' progress.
+- Verify XP and Next Best Action work with the selected batch.
+
+Only implement this feature. Do not add unrelated features.

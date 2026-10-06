@@ -1,0 +1,514 @@
+ARISE — MAJOR VISUAL DESIGN OVERHAUL
+REFERENCE-DRIVEN RPG SYSTEM UI
+
+IMPORTANT:
+The current ARISE UI is visually too simple and repeatedly uses only dark navy + cyan/blue cards.
+
+I want a MAJOR visual upgrade based on the visual language of the reference images attached to this task.
+
+Do NOT make another simple blue card.
+Do NOT just change colors.
+Do NOT redesign only one screen.
+
+Build a coherent, premium, futuristic RPG/SYSTEM visual language across ARISE.
+
+The references demonstrate:
+- cinematic composition
+- large original artwork/character silhouettes
+- dramatic typography
+- metallic/holographic frames
+- glowing emblems
+- hexagonal badges
+- energy rings
+- lightning
+- particles
+- crystals
+- layered HUD panels
+- decorative borders
+- different accent colors
+- strong foreground/background depth
+- visually distinct sections
+- rich iconography
+- reward/item artwork
+- rank symbols
+- environmental backgrounds
+
+Use these as DESIGN INSPIRATION ONLY.
+DO NOT copy copyrighted characters, logos, exact artwork, screenshots, or anime assets.
+Create original ARISE artwork and symbols.
+
+==================================================
+1. ARISE VISUAL IDENTITY
+==================================================
+
+Stop treating the entire app as:
+
+dark background + cyan card + blue button.
+
+Instead create a layered SYSTEM world.
+
+Base:
+- deep black
+- midnight navy
+- dark indigo
+- subtle gradients
+- atmospheric background
+
+Accent palette should vary by context:
+
+SYSTEM / Core:
+cyan + electric blue + white
+
+Rank:
+purple + violet + silver + gold depending on rank
+
+Warning / Recovery:
+red + crimson + orange
+
+Success / Achievement:
+gold + emerald + white
+
+Vocabulary / NCERT:
+violet + magenta + blue
+
+Maths:
+electric blue + cyan + silver
+
+Reasoning:
+purple + indigo
+
+English:
+teal + cyan + white
+
+Gate:
+violet + electric blue + white energy
+
+Boss:
+crimson + purple + black
+
+Rewards:
+gold + cyan + purple
+
+Inventory:
+dark metallic + colored rarity glow
+
+Do NOT use every color randomly.
+Colors must communicate meaning.
+
+==================================================
+2. ORIGINAL ARISE ARTWORK
+==================================================
+
+Introduce ORIGINAL visual assets throughout the app.
+
+Create original:
+- ARISE System emblem
+- System Core emblem
+- rank emblems
+- Guardian symbols
+- Gate symbols
+- Boss symbols
+- quest icons
+- achievement icons
+- relic icons
+- Life Potion icon
+- XP Crystal icon
+- Gate Key icon
+- Revision Token icon
+- Relic Fragment icon
+- Study Coin icon
+- Reward Chest icon
+- equipment slot icons
+- Journey node icons
+
+These should look like premium RPG/SYSTEM artwork.
+
+Avoid generic emoji-looking icons.
+
+==================================================
+3. DEPTH AND COMPOSITION
+==================================================
+
+Every major screen should have at least 3 visual layers:
+
+BACKGROUND
+- atmospheric environment
+- particles
+- distant energy
+- subtle structures/lightning/crystals
+
+MIDGROUND
+- large emblem/artwork
+- Guardian silhouette
+- Core
+- Gate
+- crystal formation
+- rank aura
+
+FOREGROUND
+- glass/HUD panel
+- stats
+- quest information
+- buttons
+- rewards
+- progress
+
+Do not put everything into one flat rectangular card.
+
+==================================================
+4. HUD FRAMES
+==================================================
+
+Replace ordinary rounded rectangles where appropriate with original futuristic HUD frames.
+
+Use combinations of:
+- angular corners
+- hexagonal geometry
+- metallic borders
+- holographic lines
+- segmented borders
+- glowing edges
+- inner shadow/depth
+- scan lines
+- small system glyphs
+- corner decorations
+
+Cards can still exist for readability, but they must visually belong to the ARISE System.
+
+==================================================
+5. HOME DASHBOARD
+==================================================
+
+The Home screen should feel like opening a SYSTEM STATUS interface.
+
+Include:
+- ARISE emblem
+- central System Core
+- Level
+- Rank emblem
+- XP
+- streak
+- daily quest progress
+- Next Best Action
+- Weakness Radar
+- Journey progress
+- Gate/Boss status
+- achievements/relics
+
+Create a strong visual focal point.
+
+Do NOT make the Home screen just a vertical list of cards.
+
+==================================================
+6. STATUS WINDOW
+==================================================
+
+Create a premium RPG Status Window.
+
+Include:
+- large ARISE/System emblem
+- player identity area
+- Rank emblem
+- Level
+- XP bar
+- streak
+- subject attributes
+- academic records
+- achievements
+- relics
+
+Use multiple visual sections and original icons.
+
+==================================================
+7. QUEST SCREEN
+==================================================
+
+Make Quests visually resemble a SYSTEM mission console.
+
+Different quest categories should have visual identities:
+
+DAILY:
+cyan/blue
+
+WEEKLY:
+purple
+
+SPECIAL:
+gold
+
+RECOVERY:
+crimson/orange
+
+GATE:
+violet/electric blue
+
+BOSS:
+red/crimson/purple
+
+COMPLETED:
+emerald/gold
+
+Each quest should have:
+- icon/art
+- difficulty
+- XP
+- progress
+- status
+- reward preview
+
+==================================================
+8. LEVEL-UP EVENT
+==================================================
+
+Replace the current plain Level Up popup.
+
+Create a cinematic System event:
+
+energy gathers
+→ Core pulses
+→ holographic rings expand
+→ particles accelerate
+→ large SYSTEM EVENT
+→ LEVEL UP
+→ huge level number
+→ XP energy burst
+→ reward/progression reveal
+→ particles settle
+
+Use:
+purple
+cyan
+electric blue
+white
+gold highlights
+
+The level number must be the hero element.
+
+==================================================
+9. RANK-UP EVENT
+==================================================
+
+Rank-up should feel significantly more important.
+
+Example:
+
+SYSTEM ALERT
+↓
+RANK ASCENSION
+↓
+old rank emblem fractures
+↓
+energy explosion
+↓
+new original rank emblem materializes
+↓
+new rank displayed
+↓
+unlock information
+↓
+particles + aura
+
+Different ranks must have different visual identities.
+
+==================================================
+10. GATE
+==================================================
+
+Gate must visually be an actual portal.
+
+Use:
+- large portal ring
+- multiple rotating rings
+- energy arcs
+- particles
+- crystal fragments
+- atmospheric background
+- Gate emblem
+- difficulty color
+- requirement display
+- reward preview
+
+Normal/Difficult/Special/Boss Gates must look different.
+
+==================================================
+11. REWARD SYSTEM
+==================================================
+
+Rewards must look like actual RPG items.
+
+Show:
+- item artwork
+- item name
+- rarity
+- quantity
+- glow
+- description
+
+Rarity visuals:
+
+COMMON → silver/white
+
+RARE → blue
+
+EPIC → purple
+
+LEGENDARY → gold/orange
+
+MYTHIC → crimson/violet + special energy
+
+Include:
+❤️ Fictional Life Potion
+🔷 XP Crystal
+🗝️ Gate Key
+🌀 Revision Token
+💎 Relic Fragment
+🪙 Study Coins
+
+No real-world medicine or physical reward claims.
+Life Potion is a fictional in-app item only.
+
+==================================================
+12. REWARD CHEST ANIMATION
+==================================================
+
+Create:
+
+Chest materializes
+→ energy gathers
+→ chest opens
+→ light burst
+→ item appears
+→ rarity glow
+→ item rotates/float effect
+→ quantity appears
+→ inventory updates
+
+Each reward should feel like a reward.
+
+==================================================
+13. INVENTORY
+==================================================
+
+Inventory should look like an RPG inventory, not a spreadsheet.
+
+Include:
+- item artwork
+- rarity border
+- quantity
+- category
+- inspect
+- use
+- equipped indicator
+
+Use visually distinct item slots.
+
+==================================================
+14. EQUIPMENT
+==================================================
+
+Create:
+- Equipment/Relic slots
+- equipped item artwork
+- empty slot visual
+- rarity border
+- equip animation
+- unequip animation
+- effect summary
+
+Make equipment feel collectible.
+
+==================================================
+15. GUARDIANS
+==================================================
+
+Use original Guardian artwork/silhouettes.
+
+Each Guardian should have:
+- emblem
+- name
+- subject
+- visual identity
+- aura color
+- progression state
+
+Guardians should appear throughout Journey/subject/Gate/Boss experiences.
+
+==================================================
+16. IMPORTANT VISUAL RULE
+==================================================
+
+Do NOT make every screen purple.
+
+Do NOT make every screen cyan.
+
+Do NOT make every screen blue.
+
+Use a controlled multi-color visual system.
+
+The goal is:
+BLACK/NAVY ENVIRONMENT
++
+COLORED ENERGY
++
+WHITE/METALLIC TYPOGRAPHY
++
+CONTEXTUAL ACCENTS
++
+ORIGINAL ART
++
+HUD GEOMETRY
++
+PARTICLES
++
+DEPTH
+
+==================================================
+17. MOBILE
+==================================================
+
+Everything must remain:
+- readable
+- touch friendly
+- responsive
+- performant
+- safe-area aware
+- Android friendly
+
+Use lightweight animations and reduced-motion support.
+
+==================================================
+18. DO NOT BREAK FUNCTIONALITY
+==================================================
+
+Preserve all existing:
+- XP
+- level
+- rank
+- quests
+- Gate logic
+- rewards
+- inventory
+- equipment
+- persistence
+- history
+- achievements
+
+This is primarily a VISUAL/UX overhaul.
+
+After implementation:
+1. run TypeScript checks
+2. run existing tests
+3. open the actual mobile preview
+4. visually inspect Home
+5. visually inspect Status
+6. visually inspect Quest
+7. visually inspect Level Up
+8. visually inspect Rank Up
+9. visually inspect Gate
+10. visually inspect Reward Chest
+11. visually inspect Inventory
+12. visually inspect Equipment
+
+Do NOT report the task as visually complete merely because tests pass.
+
+The actual mobile preview must visibly demonstrate the new ARISE RPG/System visual language.

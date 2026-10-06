@@ -1,0 +1,499 @@
+ARISE ACCOUNT + PROFILE SYSTEM OVERHAUL
+==================================================
+
+IMPORTANT:
+Implement ONLY the account/profile changes described below.
+Do NOT redesign or remove existing study systems, quests, XP, ranks, Journey, Boss, Gates, NCERT, Vocabulary, AI Coach, etc.
+
+Before changing code:
+1. Inspect the existing authentication, profile, persistence, cloud-save and onboarding flow.
+2. Preserve all existing user progress/data.
+3. Do not reset or delete existing stored data.
+4. Make the implementation compatible with the existing Expo/React Native Android + Web project.
+
+==================================================
+1. REMOVE GOOGLE SIGN-IN
+==================================================
+
+Remove Google Sign-In as the primary account/login mechanism.
+
+Remove:
+- Google Sign-In button
+- Google authentication flow
+- Google-specific login UI
+- Automatic restoration of an old Google-linked profile
+
+Do NOT delete existing cloud-storage infrastructure if it can be reused.
+
+The app must no longer automatically load an old profile simply because the device/browser has an old Google session.
+
+==================================================
+2. NEW ACCOUNT ENTRY SCREEN
+==================================================
+
+Create a futuristic ARISE System account screen.
+
+Title:
+"ARISE SYSTEM"
+
+Subtitle:
+"SELECT YOUR PROFILE"
+
+Two main options:
+
+A. NEW GUEST
+Description:
+"Create a new ARISE profile"
+
+B. ENTER ACCOUNT CODE
+Description:
+"Restore an existing ARISE profile"
+
+Use the existing ARISE visual language:
+- dark futuristic background
+- holographic glass panels
+- cyan/electric blue
+- purple
+- gold
+- white
+- subtle green/red status accents
+- glowing borders
+- particles/energy
+- original ARISE emblem
+- smooth lightweight animations
+
+Do NOT copy copyrighted anime artwork.
+
+==================================================
+3. NEW GUEST
+==================================================
+
+When the user selects NEW GUEST:
+
+Create a completely NEW unique profile.
+
+Fresh default state MUST be:
+
+Level: 1
+XP: 0
+Rank: E
+Streak: 0
+Phase: initial Phase 1 state
+Daily quest progress: 0
+Achievements: empty
+Inventory: empty
+Equipment: empty
+Boss history: empty
+Gate progress: initial/locked
+Study history: empty
+Personal records: default/empty
+
+Generate a unique Account ID automatically.
+
+Example format:
+
+ARISE-XXXX-XXXX
+
+The ID must be sufficiently random and unique.
+
+Do NOT reuse an old profile ID.
+
+Do NOT accidentally restore old AsyncStorage/local data.
+
+Do NOT restore another user's cloud snapshot.
+
+==================================================
+4. ACCOUNT CODE / ID
+==================================================
+
+Each profile gets its own unique Account Code/Account ID.
+
+The Account Code is the recovery identifier for the profile.
+
+Example:
+
+ARISE-7K4M-92PX
+
+The app must be able to verify the entered code against the account's cloud record.
+
+Do NOT simply trust whatever ID the user types.
+
+Verification must happen against the actual stored account/profile record.
+
+Invalid code:
+Show an ARISE-style error:
+
+"INVALID ACCOUNT CODE"
+
+Do not load any data.
+
+Valid code:
+Show:
+
+"ACCOUNT FOUND"
+
+Then show a short confirmation/recovery screen before restoring the profile.
+
+==================================================
+5. ACCOUNT RESTORE
+==================================================
+
+Flow:
+
+Account Screen
+→ ENTER ACCOUNT CODE
+→ Enter Code
+→ Verify
+→ Account Found
+→ Restore Progress
+→ Open ARISE Home
+
+Restore the complete saved profile where supported:
+
+- Level
+- XP
+- Rank
+- Streak
+- Phase
+- Quests
+- Achievements
+- Relics
+- Inventory
+- Equipment
+- Gate progress
+- Boss records
+- NCERT progress
+- Vocabulary progress
+- Calculation records
+- Lecture progress
+- Study history
+- Personal records
+- Analytics
+- Settings
+
+Do NOT overwrite the cloud account with an empty local profile during restore.
+
+Make restore atomic/safe so a failed restore does not corrupt existing data.
+
+==================================================
+6. PROFILE SCREEN
+==================================================
+
+Create a dedicated:
+
+"ARISE PROFILE"
+
+screen.
+
+Top profile area:
+
+- ARISE original profile emblem/avatar
+- Player name
+- Level
+- Rank
+- XP bar
+- Current Phase
+- Streak
+
+Create a premium System/HUD presentation.
+
+ACCOUNT section:
+
+ACCOUNT ID
+ARISE-XXXX-XXXX
+
+Buttons:
+
+[COPY ID]
+
+[SHOW / HIDE ID]
+
+Text:
+
+"Use this Account Code to restore your ARISE profile on another device."
+
+Never expose sensitive backend credentials.
+
+==================================================
+7. PROFILE SETTINGS
+==================================================
+
+Add a SETTINGS section.
+
+Include:
+
+🔊 Sound
+- ON/OFF
+- Volume control if the existing sound system supports it
+
+📳 Haptic Feedback
+- ON/OFF
+
+✨ Animations
+- Full
+- Reduced Motion
+
+🔔 Notifications
+- ON/OFF
+
+🌙 Appearance
+- System
+- Dark
+
+Persist these settings per profile.
+
+==================================================
+8. ACCOUNT MANAGEMENT
+==================================================
+
+Add:
+
+ACCOUNT ID
+BACKUP/SYNC STATUS
+RESTORE ACCOUNT
+LOG OUT
+
+LOG OUT behavior:
+
+- Log out of the current local session.
+- Do NOT delete cloud account.
+- Do NOT delete cloud progress.
+- Do NOT destroy the account ID.
+- Return to the ARISE account selection screen.
+
+After logout, the app must NOT automatically reopen the previous account.
+
+The user must explicitly choose:
+
+NEW GUEST
+
+or
+
+ENTER ACCOUNT CODE
+
+==================================================
+9. PROFILE RECORDS
+==================================================
+
+Add a compact Profile Records section showing real saved data where available:
+
+- Highest Level
+- Total XP
+- Longest Streak
+- Quests Completed
+- Lectures Completed
+- NCERT Progress
+- Boss Records
+- Achievements
+- Relics
+
+Do NOT fabricate statistics.
+
+If there is insufficient data, show:
+
+"NO RECORDED DATA"
+
+or the appropriate empty state.
+
+==================================================
+10. DATA OWNERSHIP / SECURITY
+==================================================
+
+This is critical.
+
+Every cloud profile must have a stable unique internal user/profile identifier.
+
+Do not use the Account Code itself as the only authorization mechanism.
+
+The backend must verify that the requested profile exists and that the restore operation is permitted.
+
+Do not store passwords.
+
+Do not expose backend secrets in the client.
+
+Do not allow arbitrary client-side profile IDs to overwrite another user's cloud data.
+
+Keep owner checks and existing persistence protections.
+
+==================================================
+11. MULTI-DEVICE RESTORE
+==================================================
+
+Expected flow:
+
+DEVICE A
+→ New Guest
+→ Profile created
+→ Account ID generated
+→ Study progress saved
+
+DEVICE B
+→ Enter Account Code
+→ Code verified
+→ Existing profile restored
+→ Same Level/XP/Rank/progress appears
+
+The restore must not create a duplicate account accidentally.
+
+==================================================
+12. EXISTING DATA SAFETY
+==================================================
+
+IMPORTANT:
+
+There may already be users/profiles with existing progress.
+
+DO NOT:
+- wipe the database
+- reset all users
+- delete existing snapshots
+- migrate everything to Level 1
+- remove existing persistence
+
+Only genuinely NEW GUEST profiles should start at:
+
+Level 1
+XP 0
+Rank E
+
+Existing profiles must retain their saved progress.
+
+==================================================
+13. PROFILE UI STYLE
+==================================================
+
+Make the Profile screen match ARISE's existing futuristic System aesthetic.
+
+Use:
+
+- layered background
+- subtle particles
+- holographic panels
+- metallic/HUD borders
+- cyan + electric blue
+- purple
+- gold
+- white
+- green/red status accents
+- rank emblem
+- XP visualization
+- clean typography
+- strong spacing
+- readable text
+- mobile-first layout
+
+Artwork must never cover or make text unreadable.
+
+Keep animations lightweight and Android-friendly.
+
+Respect Reduced Motion settings.
+
+==================================================
+14. TESTING
+==================================================
+
+After implementation, test these exact scenarios:
+
+TEST 1:
+Open app → NEW GUEST
+
+Expected:
+Level 1
+XP 0
+Rank E
+Streak 0
+Fresh profile
+New Account ID
+
+TEST 2:
+Logout
+
+Expected:
+Account selection screen appears.
+Old account does NOT automatically reopen.
+
+TEST 3:
+Enter invalid Account Code
+
+Expected:
+"INVALID ACCOUNT CODE"
+No profile loaded.
+
+TEST 4:
+Enter valid existing Account Code
+
+Expected:
+"ACCOUNT FOUND"
+Then saved profile is restored.
+
+TEST 5:
+Restore an existing profile containing Level/XP/progress.
+
+Expected:
+Original progress remains intact.
+
+TEST 6:
+Create another NEW GUEST.
+
+Expected:
+A different Account ID and completely fresh Level 1 / XP 0 / Rank E profile.
+
+TEST 7:
+Reload/restart the app.
+
+Expected:
+No unexpected old account restoration.
+
+TEST 8:
+Android + Web
+
+Verify the account/profile flow works on both without breaking the existing app.
+
+==================================================
+15. IMPORTANT SCOPE RULE
+==================================================
+
+Do NOT modify unrelated ARISE features.
+
+Do NOT redesign:
+- Home
+- Journey
+- Quest system
+- Boss
+- Gates
+- NCERT
+- Vocabulary
+- AI Coach
+- Analytics
+- XP system
+- Rank system
+
+Only make the changes necessary for:
+
+GOOGLE SIGN-IN REMOVAL
++
+NEW GUEST
++
+ENTER ACCOUNT CODE
++
+ACCOUNT RESTORE
++
+PROFILE SCREEN
++
+SETTINGS
++
+LOGOUT
++
+SAFE PERSISTENCE/OWNERSHIP
+
+At the end, report:
+1. Files changed
+2. Google authentication components removed
+3. New Guest flow implemented
+4. Account Code verification implemented
+5. Profile screen implemented
+6. Logout behavior implemented
+7. Persistence/restore safeguards implemented
+8. Tests performed and their results
+
+Do not claim success for any test that was not actually run.

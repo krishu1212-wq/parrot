@@ -1,0 +1,778 @@
+ARISE 46-POINT MASTER BLUEPRINT — SOURCE OF TRUTH
+
+IMPORTANT:
+This is an AUDIT ONLY. Do NOT modify, delete, refactor, redesign, reset, migrate, or generate code yet.
+
+Audit the current ARISE Study System against EVERY point 1–46 below.
+
+For each point classify it as exactly one of:
+- COMPLETE
+- PARTIAL
+- MISSING
+- NEEDS VERIFICATION
+
+For PARTIAL/MISSING/NEEDS VERIFICATION, list the exact missing or uncertain sub-features and relevant files/screens/components if identifiable.
+
+Do not invent implementation status.
+Do not count a decorative placeholder as a completed feature.
+Do not assume a feature works just because related UI exists.
+Preserve all current data and functionality.
+
+==================================================
+1. MAIN HOME / SYSTEM DASHBOARD
+==================================================
+- Dark futuristic background
+- Blue/cyan glow with purple/green/gold/red accents
+- Animated particles and ambient glow
+- Central System Core
+- ARISE logo/artwork
+- Level, XP and Rank
+- Streak
+- Daily Mission progress
+- Daily Mission Briefing
+- Next Best Action
+- Weakness Radar
+- Study Journey progress
+- Phase progress
+- Achievements/Relics
+- Current Gate/Boss information
+- System notifications
+- Smooth lightweight animations
+
+==================================================
+2. RANK SYSTEM
+==================================================
+Exact progression:
+E → D → C → B → A → S → SS → SSS → Hidden/Transcendent
+
+Every rank should support:
+- Original crown/emblem
+- XP/progression requirements
+- Unique visual aura
+- Rank-up/ascension animation
+- System announcement
+- Appropriate new unlocks/Gates/Missions
+- Rank history
+
+==================================================
+3. LEVEL + XP SYSTEM
+==================================================
+- Study activity XP
+- Quest XP
+- Lecture XP
+- Practice XP
+- NCERT XP
+- Vocabulary XP
+- Boss rewards
+- Gate rewards
+- Achievement rewards
+- Level-up animation
+- XP bar
+- XP history
+- Duplicate XP/completion protection
+
+==================================================
+4. QUEST / MISSION SYSTEM
+==================================================
+Quest types:
+- Daily
+- Weekly
+- Long-term
+- Special
+- Boss
+- Recovery
+- Gate
+- Completed
+
+Daily missions:
+1. Morning workout
+2. Black Book vocabulary — 1 page
+3. Timed calculation
+4. Maths — 1 lecture
+5. NCERT reading
+6. NCERT vocabulary — note and learn
+
+Quest cards should support:
+- Original artwork/icon
+- Difficulty
+- XP reward
+- Progress
+- Locked/unlocked state
+- Completion state/animation
+
+==================================================
+5. DAILY MISSION BRIEFING
+==================================================
+On app/session entry:
+- Today's missions
+- Priority order
+- Estimated study time
+- Current streak
+- XP/Level/Rank
+- Pending mission
+- Weak area
+- Begin Mission
+- Integration with Next Best Action
+
+==================================================
+6. FOCUS / MISSION MODE
+==================================================
+- Current mission
+- Timer
+- Progress
+- Focus session
+- AI Coach
+- Optional DND reminder/instruction
+- Complete Mission action
+
+Session summary:
+- Study time
+- Accuracy where applicable
+- XP
+- Task completed
+- Next Best Action
+
+==================================================
+7. STUDY JOURNEY MAP
+==================================================
+Path:
+Foundation → Maths → NCERT → Vocabulary → Phase 2 → Reasoning → English → Revision → Boss Tests
+
+Support:
+- Locked/unlocked paths
+- Progress percentage
+- Subject Guardians
+- Achievements
+- Current mission
+- Next mission
+- XP
+- Next Best Action
+
+==================================================
+8. PHASE SYSTEM
+==================================================
+Phase 1:
+- Maths
+- NCERT
+- Vocabulary
+- Calculation
+- Basic training
+
+Phase 2 unlocks after the defined Maths + NCERT foundation requirements:
+- Reasoning
+- English
+- Advanced revision
+
+Phase unlock should support:
+- System update/awakening presentation
+- NEW PATH UNLOCKED
+- Animation
+- Emblem
+- Sound where enabled
+- Reduced-motion alternative
+
+==================================================
+9. GATE / DUNGEON SYSTEM
+==================================================
+Must support:
+- Normal Gates
+- Difficult Gates
+- Special Gates
+- Boss Gates
+- Required Level/Rank
+- Difficulty
+- Time limit where appropriate
+- Enter Gate
+- Gate challenge
+- Completion
+- Rewards
+- Locked conditions
+- Unlock conditions
+
+This must be a real study challenge system, not merely decorative UI.
+
+==================================================
+10. WEEKLY BOSS SYSTEM
+==================================================
+- Weekly Boss
+- Weekly studied-content-based questions
+- Difficulty
+- Original Boss artwork
+- Boss level
+- Progress/HP-style bar where appropriate
+- Threat indicator
+- Start Boss
+- Result
+- XP
+- Rewards
+- Weak topics
+- Mistakes
+- Accuracy
+- Recommended revision
+- Re-test
+
+==================================================
+11. SUBJECT GUARDIANS
+==================================================
+Original Guardians for:
+- Maths
+- NCERT
+- Vocabulary
+- Reasoning
+- English
+
+Use appropriately across:
+- Journey Map
+- Subject screens
+- Boss/Gate screens
+- Cards
+
+==================================================
+12. WEAKNESS RADAR
+==================================================
+Use real academic data from:
+- Practice accuracy
+- Mistakes
+- Boss results
+- Topic performance
+- Lecture/topic performance
+
+Weakness flow:
+Concept Revision → Practice → Re-test
+
+Integrate with:
+- Next Best Action
+- Practice
+- Boss Tests
+- Lecture Tracker
+- Journey Map
+
+Never fabricate performance data when insufficient data exists.
+
+==================================================
+13. HUNTER / STUDY STATS
+==================================================
+Academic attributes:
+- Maths
+- NCERT
+- Vocabulary
+- Calculation
+- Reasoning
+- English
+- Overall Study
+- Focus/Consistency
+
+Stats must be derived from real study/performance data.
+
+==================================================
+14. RPG STATUS WINDOW
+==================================================
+Show appropriate real data:
+- Level
+- Rank
+- XP
+- Streak
+- Subject stats
+- Phase
+- Achievements
+- Relics
+- Records
+- Overall progress
+
+==================================================
+15. INVENTORY
+==================================================
+Support:
+- Keys
+- Relics
+- Special rewards
+- Revision tokens
+- Quest items
+- Quantities
+- Inspect/use actions where meaningful
+
+==================================================
+16. EQUIPMENT / LOADOUT
+==================================================
+Study-related equipment only:
+- XP Boost
+- Quest Modifier
+- Revision Token
+- Boss Entry Item
+- Special Study Boost
+- Achievement Relics
+
+Must be balanced and not pay-to-win.
+
+==================================================
+17. ACHIEVEMENTS / RELICS
+==================================================
+Original collectible achievements/relics such as:
+- 7-Day Streak
+- 30-Day Streak
+- First Boss Defeat
+- 100 Lectures
+- NCERT Master
+- Vocabulary Master
+- Calculation Master
+- Rank achievements
+- Gate achievements
+
+Only unlock when actual conditions are met.
+
+==================================================
+18. STREAK / COMBO
+==================================================
+- Daily streak
+- Quest completion
+- Combo/progression
+- Milestones
+- Streak achievements
+- Streak animations
+
+==================================================
+19. SYSTEM HISTORY / LOG
+==================================================
+Persist/display appropriate history:
+- Quest completion
+- XP earned
+- Level-up
+- Rank-up
+- Gate completion
+- Boss results
+- Achievement unlocks
+- Study sessions
+- Lecture activity
+- Important system events
+- Date/time
+
+==================================================
+20. PERSONAL RECORDS
+==================================================
+Track real records such as:
+- Highest daily XP
+- Longest streak
+- Most lectures
+- Best Boss Test score
+- Most NCERT pages
+- Best calculation performance
+- Other meaningful academic records
+
+==================================================
+21. ANALYTICS / PROGRESS HUD
+==================================================
+Weekly/monthly analytics:
+- XP
+- Study time
+- Accuracy
+- Subject progress
+- Weak/strong areas
+- Streak
+- Historical progress
+- Lecture progress
+- NCERT progress
+
+==================================================
+22. TRAINING SYSTEM
+==================================================
+Training modules:
+- Maths
+- NCERT
+- Vocabulary
+- Calculation
+- Reasoning
+- English
+- Focus sessions
+
+Respect phase/unlock rules.
+
+==================================================
+23. NCERT SYSTEM
+==================================================
+- NCERT books
+- Adaptive targets
+- Small book can fit a short target
+- Large book can be split into chapters/sessions
+- Reading progress
+- Vocabulary extraction
+- Learn/recall
+- Book completion
+- NCERT progress
+
+==================================================
+24. VOCABULARY SYSTEM
+==================================================
+- Black Book
+- 1 page/day target
+- NCERT vocabulary
+- Learn
+- Recall
+- Practice
+- Revision
+- Vocabulary progress
+- Vocabulary achievements
+
+==================================================
+25. TIMED CALCULATION TRAINING
+==================================================
+- Daily challenge
+- Timer
+- Accuracy
+- Speed
+- Mistake tracking
+- Personal best
+- Improvement history
+
+==================================================
+26. LECTURE TRACKER
+==================================================
+Support:
+- Multiple batches
+- Subjects
+- Topics
+- Lectures
+- Lecture links
+- Start lecture
+- In-progress
+- Completed
+- XP
+- Topic progress
+- Subject progress
+- Next Best Action
+
+External platforms such as Careerwill must not be assumed to provide automatic watch detection unless an authorized API/integration exists.
+
+==================================================
+27. DYNAMIC BATCH SYSTEM
+==================================================
+- Multiple batches
+- Different subjects
+- Different topics
+- Different lecture counts
+- Add/edit lectures
+- Add/edit topics
+- Batch switching
+- Preserve old batch progress
+- Separate new batch progress
+- Dynamic progress calculation
+- Persistence
+
+Progress must be calculated dynamically, not hard-coded.
+
+==================================================
+28. AI COACH / ARISE ASSISTANT
+==================================================
+Support:
+- Doubt solving
+- Concept explanation
+- Study guidance
+- Mistake Explanation
+- One More Question
+- Read → Recall
+- Next Best Action
+- Weakness-based recommendations
+- Revision help
+
+==================================================
+29. CONCEPT MAP
+==================================================
+Support connections such as:
+Concept → Related Concept → Practice → Mistakes → Revision
+
+==================================================
+30. RECOVERY SYSTEM
+==================================================
+If a quest is missed:
+- Missed status
+- Safe XP/bonus consequence where appropriate
+- Recovery Quest
+- Catch-up mission
+- Next action
+
+No physical punishment or harmful consequence.
+
+==================================================
+31. 7-DAY EXPERIMENT
+==================================================
+- Start
+- Daily progress
+- Result
+- Analysis
+- Continue/change strategy
+
+==================================================
+32. WIND-DOWN SYSTEM
+==================================================
+- Short review
+- Today's achievement
+- Tomorrow's priority
+- Wind-down reminder
+- Next mission preparation
+
+==================================================
+33. MORNING WORKOUT COACH
+==================================================
+- Safe/light daily routine
+- Beginner-friendly
+- Timer
+- Completion
+- Safe training records
+
+No overtraining or body-image goals.
+
+==================================================
+34. FOCUS TIMERS
+==================================================
+- 25-minute focus
+- 50-minute focus
+- Break timer
+- Session tracking
+- XP integration
+
+==================================================
+35. SYSTEM NOTIFICATIONS
+==================================================
+Support original cinematic notifications such as:
+[SYSTEM] NEW QUEST DETECTED
+[SYSTEM] WEEKLY BOSS DETECTED
+[SYSTEM] RANK ASCENSION AVAILABLE
+[SYSTEM] NEW GATE UNLOCKED
+[SYSTEM] ACHIEVEMENT UNLOCKED
+
+With:
+- Glow
+- Subtle animation
+- Non-annoying behavior
+
+==================================================
+36. ANIMATION SYSTEM
+==================================================
+- System Core animation
+- XP animation
+- Quest completion
+- Level-up
+- Rank-up
+- Phase unlock
+- Gate unlock
+- Boss start
+- Boss defeat
+- Achievement unlock
+- Streak
+- System notification
+
+Must remain Android-friendly and support reduced-motion behavior.
+
+==================================================
+37. SOUND SYSTEM
+==================================================
+Original/licensed SFX for:
+- XP
+- Quest
+- Level-up
+- Rank-up
+- Unlock
+- Streak
+- Boss
+- Achievement
+- System notification
+
+Settings:
+- Sound ON/OFF
+- Volume
+
+Do not copy copyrighted anime sounds.
+
+==================================================
+38. COMPLETE VISUAL DESIGN
+==================================================
+ARISE visual identity:
+- Deep black/navy
+- Cyan/blue primary glow
+- Purple/green/gold/red accents
+- Glass/HUD panels
+- Thin glowing borders
+- Angular/hexagonal elements
+- Holographic UI
+- Central System Core
+- Original ARISE artwork
+- Original Guardians
+- Original Bosses
+- Original Rank Crowns
+- Original Relics
+
+Reference screenshots may inspire richness/layout concepts, but do not copy copyrighted assets or exact UI.
+
+==================================================
+39. CINEMATIC OPENING
+==================================================
+First launch/session opening:
+SYSTEM ACTIVATED
+→ ARISE emblem
+→ particles/energy
+→ system text
+→ Level
+→ Rank
+→ Day
+→ Home
+
+==================================================
+40. GOOGLE SIGN-IN + USER ACCOUNT
+==================================================
+- Continue with Google
+- Unique stable User ID
+- Account-linked progress
+- Cloud save
+- Reinstall recovery where backend is configured
+- Local/offline support where possible
+- Safe merge/conflict handling
+- Never store Google passwords
+
+==================================================
+41. PERSISTENT DATA
+==================================================
+Persist safely:
+- XP
+- Level
+- Rank
+- Streak
+- Quest history
+- Achievements
+- Lecture progress
+- NCERT progress
+- Boss results
+- Stats
+- Records
+- Inventory
+- Equipment
+- History
+- Phase unlocks
+
+Must include safe handling of malformed/corrupted saved data without unnecessarily resetting valid progress.
+
+==================================================
+42. MOBILE / ANDROID OPTIMIZATION
+==================================================
+- Responsive UI
+- Small-screen support
+- Smooth scrolling
+- Lightweight animations
+- Performance optimization
+- Readable text
+- Touch-friendly controls
+- Reduced-motion support
+- No unnecessary heavy effects
+
+==================================================
+43. FUTURE QUESTION ENGINE
+==================================================
+When authorized books/PDFs/content are later provided:
+- Content-based questions
+- Practice
+- Recall
+- Weakness detection
+- Boss questions
+- Revision
+
+Only authorized content may be used/distributed.
+
+==================================================
+44. PLAY STORE READY SYSTEM
+==================================================
+- Production build
+- Android AAB
+- App icon
+- Package/application ID
+- Signing
+- Privacy/Data Safety
+- Store listing
+- Screenshots
+- Testing
+- Release readiness
+
+Do not bypass age/account/payment/platform requirements.
+
+==================================================
+45. OVERALL ARISE PHILOSOPHY
+==================================================
+The systems should connect as:
+
+Study
+↓
+Quest
+↓
+Completion
+↓
+XP
+↓
+Level
+↓
+Rank
+↓
+Gate
+↓
+Boss
+↓
+Achievement / Relic
+↓
+Stats / Records
+↓
+Weakness Detection
+↓
+Next Best Action
+↓
+Next Quest
+
+Actual study data should drive progression wherever applicable.
+
+==================================================
+46. FINAL PROGRESSION
+==================================================
+Exact rank progression:
+
+E → D → C → B → A → S → SS → SSS → Hidden/Transcendent
+
+SS and SSS are required ranks.
+Hidden/Transcendent is a later special tier, not a replacement for SSS.
+
+==================================================
+AUDIT RULES
+==================================================
+
+1. Audit all 46 points individually.
+2. Do not combine points into a single vague status.
+3. For every point, list:
+   - Status
+   - Implemented sub-features
+   - Missing/uncertain sub-features
+   - Relevant files/screens/components if identifiable
+4. Do not modify code.
+5. Do not change user data.
+6. Do not reset progress.
+7. Do not add features during this audit.
+8. Do not invent features or claim tests that were not actually run.
+9. Preserve all currently working functionality.
+10. Pay special attention to:
+   - Gate/Dungeon system
+   - Boss system
+   - SS/SSS/Hidden/Transcendent ranks
+   - Inventory
+   - Equipment/Loadout
+   - Guardians
+   - Achievements/Relics
+   - Dynamic batches
+   - Google/cloud persistence
+   - Weakness Radar
+   - AI Coach
+   - Analytics
+   - Visual/animation/sound layers
+   - Mobile performance
+
+FINAL OUTPUT REQUIRED:
+
+A. COMPLETE — points fully implemented
+B. PARTIAL — points with exact missing pieces
+C. MISSING — points not implemented
+D. NEEDS VERIFICATION — points that exist but require runtime/manual verification
+E. RECOMMENDED IMPLEMENTATION ORDER — only for PARTIAL/MISSING/NEEDS VERIFICATION items
+
+Again: AUDIT ONLY. Make NO code changes until the audit report is complete.

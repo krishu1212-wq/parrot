@@ -1,0 +1,296 @@
+ARISE — FINAL 4-PART VISUAL + PROGRESSION UPDATE
+
+Implement ALL 4 changes below together in the SAME task.
+
+IMPORTANT:
+Use the attached/reference ARISE UI image as the visual direction.
+
+Do NOT remove or break existing functionality, navigation, study data, XP, quests, persistence or saved progress.
+
+==================================================
+1. REDESIGN THE MISSION BRIEFING / QUEST POPUP
+==================================================
+
+Redesign the current plain Mission Briefing / Quest popup.
+
+Make it look like a premium ARISE futuristic System panel:
+
+- dark glass/HUD panel
+- layered holographic borders
+- angular/hexagonal corners
+- electric cyan/blue glow
+- subtle purple and gold accents
+- red accent for Important/Revision sections
+- glowing Rank emblem
+- polished futuristic typography
+- quest icons
+- XP reward indicators
+- progress indicators
+- premium BEGIN MISSION button
+- subtle background energy
+- floating particles/crystals
+- cinematic depth and lighting
+
+It should feel like a premium RPG System interface, NOT a normal mobile form.
+
+Keep text readable and responsive on small Android screens.
+
+==================================================
+2. ANIMATED CRYSTAL / CORE NAVIGATION ICON
+==================================================
+
+Keep the newly redesigned central Crystal/Core navigation icon.
+
+Make it feel alive:
+
+- crystal slowly rotates continuously
+- subtle 3D-style rotation
+- surrounding energy ring rotates at a different speed/direction
+- cyan/blue glow pulse
+- tiny particles orbit the crystal
+- occasional light sweep/reflection across crystal
+- stronger glow when selected
+- subtle energy burst on tap
+
+Animation must be smooth, premium and controlled.
+
+Do NOT make it spin too fast.
+
+Reduced-motion support:
+- disable continuous rotation
+- keep subtle static glow
+- preserve usability
+
+==================================================
+3. FILL THE EMPTY SIDE SPACE
+==================================================
+
+The current app has empty/plain space around the main content.
+
+Transform those areas into the ARISE futuristic environment.
+
+Add subtle:
+
+- futuristic structures
+- glowing crystals
+- floating crystal shards
+- holographic geometry
+- cyan/blue energy streams
+- atmospheric particles
+- sparks
+- faint light rays
+- purple highlights
+- gold accents
+- layered foreground/midground/background depth
+
+The side environment should make the screen feel like the ARISE System world continues beyond the main UI.
+
+IMPORTANT:
+
+Do NOT stretch the main UI.
+
+Keep side areas decorative.
+
+Do NOT:
+- cover text
+- cover buttons
+- reduce touch areas
+- create horizontal scrolling
+- make the screen visually noisy
+
+Use lightweight Android-friendly effects.
+
+==================================================
+4. MAKE ALL RANKS HARDER TO ACHIEVE
+==================================================
+
+Keep the complete rank progression:
+
+E → D → C → B → A → S → SS → SSS
+
+BUT make progression significantly harder and more meaningful.
+
+IMPORTANT:
+Do NOT simply make the XP requirement slightly larger.
+
+Create a properly escalating progression system.
+
+Suggested structure:
+
+E-RANK
+→ beginner/foundation progression
+
+D-RANK
+→ requires substantially more accumulated XP and meaningful completed study activity
+
+C-RANK
+→ requires stronger consistent study progress
+
+B-RANK
+→ requires sustained performance over time
+
+A-RANK
+→ requires high cumulative XP + strong study consistency
+
+S-RANK
+→ major milestone requiring substantial long-term progress
+
+SS-RANK
+→ extremely difficult endgame milestone
+
+SSS-RANK
+→ elite/endgame milestone requiring exceptional long-term progression
+
+Use balanced escalating requirements.
+
+The higher the rank:
+- the larger the XP requirement
+- the stronger the consistency requirement
+- the longer the progression should take
+- the more meaningful the rank should feel
+
+Do NOT make ranks impossible.
+
+The progression should remain achievable through genuine study activity.
+
+IMPORTANT:
+Do NOT reward rank progression from fake/mock activity.
+
+Only legitimate recorded study/quest/practice activity should contribute.
+
+Make sure:
+- rank requirements are persistent
+- rank cannot accidentally skip tiers
+- rank history remains accurate
+- XP/rank calculations remain deterministic
+- existing user XP/data is preserved
+- current rank is recalculated safely if requirements change
+
+Do NOT delete existing progress.
+
+Also ensure future ranks are properly supported:
+
+E
+D
+C
+B
+A
+S
+SS
+SSS
+
+Each rank should have:
+- unique emblem/crown treatment
+- distinct visual identity
+- increasing aura intensity
+- appropriate unlock/announcement
+- stronger visual effects at higher ranks
+
+Do not use the same S artwork for SS/SSS.
+
+==================================================
+VISUAL RANK PROGRESSION
+==================================================
+
+Rank visuals should become progressively more powerful:
+
+E → minimal energy
+D → stronger glow
+C → refined crystal aura
+B → stronger holographic frame
+A → gold/cyan energy accents
+S → major cinematic aura
+SS → intense multi-layer energy
+SSS → elite legendary System presentation
+
+Keep visuals original and ARISE-specific.
+
+==================================================
+ANIMATION & SOUND
+==================================================
+
+Add/reuse lightweight effects for:
+
+- popup entrance
+- crystal rotation
+- crystal glow
+- energy-ring rotation
+- navigation tap
+- rank-up animation
+- rank aura activation
+- subtle particles
+- holographic shimmer
+
+If the existing sound system is available, use original/licensed-style UI SFX for:
+- crystal activation
+- rank-up
+- quest completion
+- popup confirmation
+
+Do NOT use copyrighted anime sounds.
+
+Respect reduced-motion settings.
+
+==================================================
+DO NOT BREAK EXISTING SYSTEMS
+==================================================
+
+Preserve:
+
+- XP
+- Level
+- Rank
+- Quests
+- Missions
+- Journey
+- Gate
+- Boss
+- Achievements
+- Inventory
+- Equipment
+- AI Coach
+- Study progress
+- Navigation
+- Persistence
+- Saved user data
+
+Do NOT reset data.
+
+Do NOT replace real data with mock data.
+
+==================================================
+FINAL ACCEPTANCE CHECK
+==================================================
+
+Verify all four areas:
+
+[ ] Mission Briefing/Quest popup is premium and cinematic.
+[ ] Crystal/Core navigation icon rotates smoothly.
+[ ] Crystal has glow + energy-ring animation.
+[ ] Tap feedback works.
+[ ] Reduced-motion mode works.
+[ ] Empty side areas now have a futuristic ARISE environment.
+[ ] Side decorations do not cover content.
+[ ] No horizontal overflow.
+[ ] Android layout remains responsive.
+[ ] E → D → C → B → A → S → SS → SSS progression exists.
+[ ] Rank requirements are substantially harder and properly escalating.
+[ ] No accidental rank skipping.
+[ ] Rank history remains correct.
+[ ] Existing XP/study progress is preserved.
+[ ] Higher ranks have stronger unique visuals.
+[ ] SS and SSS have their own visual treatment.
+[ ] Existing navigation still works.
+[ ] Web preview still works.
+[ ] Android performance remains smooth.
+
+MOST IMPORTANT:
+
+Implement ALL 4 in the SAME TASK:
+
+1. Premium Mission Briefing/Quest popup
+2. Rotating animated Crystal/Core navigation icon
+3. Futuristic environment filling empty side spaces
+4. Harder, properly escalating E → D → C → B → A → S → SS → SSS rank progression
+
+Do not implement only part of the task.

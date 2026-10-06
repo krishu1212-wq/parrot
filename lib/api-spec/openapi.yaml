@@ -1,0 +1,1306 @@
+openapi: 3.1.0
+info:
+  # Do not change the title, if the title changes, the import paths will be broken
+  title: Api
+  version: 0.1.0
+  description: API specification
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: coach
+    description: Stateless AI Coach operations
+  - name: study
+    description: Authenticated account-scoped study progress operations
+  - name: guild
+    description: Profile-owned study Guilds and Sunday tournament operations
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+  /coach/status:
+    get:
+      operationId: checkCoachStatus
+      tags: [coach]
+      summary: Check AI Coach SDK and configuration readiness
+      description: Checks managed integration configuration and local SDK initialization only. It does not contact the provider; a response is confirmed only after a learner sends a request.
+      responses:
+        "200":
+          description: The server SDK loaded and managed integration configuration is present; provider availability has not been probed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachStatus"
+        "503":
+          description: The managed integration is not configured or the server SDK could not be initialized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachStatus"
+        "429":
+          description: Status probes are temporarily rate limited
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachError"
+  /coach/respond:
+    post:
+      operationId: createCoachResponse
+      tags: [coach]
+      summary: Generate a focused study response without storing conversation data
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CoachRequest"
+      responses:
+        "200":
+          description: AI-generated coaching response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachResponse"
+        "400":
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachError"
+        "413":
+          description: Request exceeds the request size limit
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachError"
+        "429":
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachError"
+        "503":
+          description: The AI Coach is temporarily unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachError"
+        "504":
+          description: The AI Coach request timed out
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CoachError"
+  /study/account:
+    get:
+      operationId: getStudyAccount
+      tags: [study]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Read the authenticated profile's study progress
+      description: Returns only the server-verified owner's saved study state and echoes the verified owner ID for client-side isolation checks. A new profile has explicit null state, revision 0, and null updatedAt.
+      responses:
+        "200":
+          description: Current account study state or the explicit missing-state value
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccount"
+        "401":
+          description: A valid signed-in Clerk session or native token is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountError"
+        "503":
+          description: Account progress storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountError"
+    put:
+      operationId: putStudyAccount
+      tags: [study]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Save the authenticated profile's study progress with compare-and-swap
+      description: The server uses the verified session identity as owner. expectedRevision must match the stored revision (0 for a new profile); an optional expectedOwnerId rejects stale writes after an account switch.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/StudyAccountInput"
+      responses:
+        "200":
+          description: Saved state with the new server-assigned revision and timestamp
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccount"
+        "400":
+          description: Invalid envelope, revision, or bounded JSON study state
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountError"
+        "401":
+          description: A valid signed-in Clerk session or native token is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountError"
+        "409":
+          description: The account assertion does not match or the expected revision is stale
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountConflict"
+        "413":
+          description: Request exceeds the account-state size limit
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountError"
+        "503":
+          description: Account progress storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyAccountError"
+  /study/profiles:
+    post:
+      operationId: createStudyProfile
+      tags: [study]
+      security: []
+      summary: Create a new guest profile and one-time recovery credentials
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateStudyProfileInput"
+      responses:
+        "201":
+          description: Profile created with a one-time recovery key
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CreateStudyProfileResult"
+        "400":
+          description: Profile defaults or display name are invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+        "503":
+          description: Profile storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+  /study/profiles/restore/prepare:
+    post:
+      operationId: prepareStudyProfileRestore
+      tags: [study]
+      security: []
+      summary: Verify a recovery key and prepare a short-lived restore confirmation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PrepareStudyProfileRestoreInput"
+      responses:
+        "200":
+          description: Recovery credentials verified; no progress is returned yet
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PreparedStudyProfileRestore"
+        "400":
+          description: Recovery code or key is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+        "503":
+          description: Profile storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+  /study/profiles/restore/confirm:
+    post:
+      operationId: confirmStudyProfileRestore
+      tags: [study]
+      security: []
+      summary: Confirm a prepared profile restore and issue a profile session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConfirmStudyProfileRestoreInput"
+      responses:
+        "200":
+          description: Confirmed profile identity and session token
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileSessionResponse"
+        "400":
+          description: Restore confirmation expired or is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+        "503":
+          description: Profile storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+  /study/profile:
+    get:
+      operationId: getStudyProfile
+      tags: [study]
+      security:
+        - AriseProfileBearer: []
+      summary: Read the active profile's public identity and preferences
+      responses:
+        "200":
+          description: Public profile data; recovery credentials are never returned
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfile"
+        "401":
+          description: A valid profile session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+    patch:
+      operationId: updateStudyProfile
+      tags: [study]
+      security:
+        - AriseProfileBearer: []
+      summary: Update the active profile's name and preferences
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateStudyProfileInput"
+      responses:
+        "200":
+          description: Updated profile data
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfile"
+        "400":
+          description: Profile update is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+        "401":
+          description: A valid profile session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/StudyProfileError"
+  /study/guilds:
+    get:
+      operationId: listStudyGuilds
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: List active Guilds for the authenticated profile
+      responses:
+        "200":
+          description: Active Guild memberships
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildListResponse"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+    post:
+      operationId: createStudyGuild
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Create a Guild and become its leader
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateGuildInput"
+      responses:
+        "201":
+          description: New Guild and leader membership
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Guild"
+        "400":
+          description: Guild details are invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+  /study/guilds/join:
+    post:
+      operationId: joinStudyGuild
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Join a Guild with its shareable code
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JoinGuildInput"
+      responses:
+        "200":
+          description: Active Guild membership
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Guild"
+        "400":
+          description: Guild code is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "404":
+          description: No active Guild matches this code
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "409":
+          description: Guild is full or membership conflicts
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+  /study/guilds/{guildId}:
+    get:
+      operationId: getStudyGuild
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Read a member-only, privacy-limited Guild view
+      parameters:
+        - name: guildId
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        "200":
+          description: Guild members, tournament scores, and permitted evidence
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildDetailsResponse"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "403":
+          description: The profile is not an active Guild member
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "404":
+          description: Guild was not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+  /study/guilds/{guildId}/leave:
+    post:
+      operationId: leaveStudyGuild
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Leave a Guild while retaining its history
+      parameters:
+        - name: guildId
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      responses:
+        "200":
+          description: Membership ended
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildLeaveResponse"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "403":
+          description: The profile is not an active Guild member
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "404":
+          description: Guild was not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+  /study/guilds/{guildId}/submissions:
+    post:
+      operationId: submitStudyGuildEvidence
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Submit one saved study event for the Sunday tournament
+      description: The server verifies the event against saved study history. Client XP and correctness are never accepted. An optional note is context, not proof of correctness.
+      parameters:
+        - name: guildId
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GuildSubmissionInput"
+      responses:
+        "201":
+          description: Evidence accepted for review
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildSubmission"
+        "400":
+          description: The saved event is not eligible for this tournament
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "403":
+          description: The profile is not an active Guild member
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "404":
+          description: Guild was not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "409":
+          description: The member reached the three-event Sunday limit or already submitted this event
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+  /study/guilds/{guildId}/submissions/{submissionId}/review:
+    post:
+      operationId: reviewStudyGuildEvidence
+      tags: [guild]
+      security:
+        - ClerkSessionCookie: []
+        - ClerkNativeBearer: []
+        - AriseProfileBearer: []
+      summary: Approve or reject another member's tournament evidence
+      parameters:
+        - name: guildId
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+        - name: submissionId
+          in: path
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReviewGuildEvidenceInput"
+      responses:
+        "200":
+          description: Evidence review was recorded
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildSubmission"
+        "400":
+          description: Review choice is invalid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "401":
+          description: A valid account session is required
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "403":
+          description: Only the Guild leader can review another member's evidence
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "404":
+          description: Guild or submission was not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "409":
+          description: Evidence was already reviewed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+        "503":
+          description: Guild storage is unavailable
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GuildError"
+components:
+  securitySchemes:
+    ClerkSessionCookie:
+      type: apiKey
+      in: cookie
+      name: __session
+      description: Clerk browser session cookie, sent automatically for same-origin web requests.
+    ClerkNativeBearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Verified Clerk session token for native clients.
+    AriseProfileBearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Server-signed ARISE guest profile session.
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
+    CoachStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [available, unavailable]
+        message:
+          type: string
+          maxLength: 240
+        probedAt:
+          type: string
+          format: date-time
+      required: [status, message, probedAt]
+    CoachMode:
+      type: string
+      enum:
+        - coach
+        - read-recall
+        - mistake
+        - one-more-question
+        - concept-map
+        - next-best-action
+        - wind-down
+        - experiment
+    CoachRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        mode:
+          $ref: "#/components/schemas/CoachMode"
+        fields:
+          type: object
+          additionalProperties: false
+          properties:
+            text:
+              type: string
+              maxLength: 2500
+            notes:
+              type: string
+              maxLength: 4000
+            question:
+              type: string
+              maxLength: 1200
+            recall:
+              type: string
+              maxLength: 2500
+            attempt:
+              type: string
+              maxLength: 1800
+            correctAnswer:
+              type: string
+              maxLength: 1800
+            material:
+              type: string
+              maxLength: 4000
+            subject:
+              type: string
+              maxLength: 80
+            topic:
+              type: string
+              maxLength: 120
+            reflection:
+              type: string
+              maxLength: 1200
+            goal:
+              type: string
+              maxLength: 500
+          required: []
+        progress:
+          $ref: "#/components/schemas/CoachProgress"
+      required: [mode, fields]
+    CoachProgress:
+      type: object
+      additionalProperties: false
+      properties:
+        streak:
+          type: integer
+          minimum: 0
+          maximum: 10000
+        todayXp:
+          type: integer
+          minimum: 0
+          maximum: 10000000
+        quests:
+          type: array
+          maxItems: 8
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              title:
+                type: string
+                maxLength: 80
+              completed:
+                type: boolean
+            required: [title, completed]
+        subjects:
+          type: array
+          maxItems: 10
+          items:
+            type: object
+            additionalProperties: false
+            properties:
+              name:
+                type: string
+                maxLength: 80
+              completed:
+                type: integer
+                minimum: 0
+                maximum: 100000
+              total:
+                type: integer
+                minimum: 0
+                maximum: 100000
+            required: [name, completed, total]
+        nextLecture:
+          type: object
+          additionalProperties: false
+          properties:
+            subject:
+              type: string
+              maxLength: 80
+            topic:
+              type: string
+              maxLength: 120
+            title:
+              type: string
+              maxLength: 120
+          required: [subject, topic, title]
+    CoachResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        reply:
+          type: string
+          maxLength: 12000
+        reviewCard:
+          type: object
+          additionalProperties: false
+          properties:
+            question:
+              type: string
+              maxLength: 1200
+            answer:
+              type: string
+              maxLength: 2400
+            topicTitle:
+              type: string
+              maxLength: 120
+          required: [question, answer, topicTitle]
+      required: [reply]
+    CoachError:
+      type: object
+      additionalProperties: false
+      properties:
+        error:
+          type: string
+          maxLength: 240
+      required: [error]
+    StudyProgress:
+      type: object
+      description: Complete persisted StudyState JSON object. Additional keys are preserved for forward compatibility.
+      additionalProperties: true
+      maxProperties: 1000
+    StudyAccount:
+      type: object
+      additionalProperties: false
+      properties:
+        ownerId:
+          type: string
+          minLength: 1
+          maxLength: 255
+          description: The verified Clerk user ID that owns this snapshot.
+        state:
+          type: [object, "null"]
+          description: null when the account has never saved progress; otherwise the complete saved StudyState.
+          additionalProperties: true
+          maxProperties: 1000
+        revision:
+          type: integer
+          minimum: 0
+          maximum: 2147483647
+        updatedAt:
+          type: [string, "null"]
+          format: date-time
+      required: [ownerId, state, revision, updatedAt]
+    StudyAccountInput:
+      type: object
+      additionalProperties: false
+      properties:
+        expectedOwnerId:
+          type: string
+          minLength: 1
+          maxLength: 255
+          description: Optional assertion of the client account at save start; the server never uses this as the row owner.
+        expectedRevision:
+          type: integer
+          minimum: 0
+          maximum: 2147483646
+          description: Use 0 only to create a missing account state; otherwise this must equal the current server revision.
+        state:
+          $ref: "#/components/schemas/StudyProgress"
+      required: [expectedRevision, state]
+    StudyAccountError:
+      type: object
+      additionalProperties: false
+      properties:
+        error:
+          type: string
+          maxLength: 240
+      required: [error]
+    StudyAccountConflict:
+      type: object
+      additionalProperties: false
+      properties:
+        error:
+          type: string
+          maxLength: 240
+        currentRevision:
+          type: integer
+          minimum: 0
+          maximum: 2147483647
+      required: [error]
+    ProfileSettings:
+      type: object
+      additionalProperties: false
+      properties:
+        soundEnabled:
+          type: boolean
+        soundVolume:
+          type: number
+          minimum: 0
+          maximum: 1
+        hapticsEnabled:
+          type: boolean
+        motion:
+          type: string
+          enum: [full, reduced]
+        notificationsEnabled:
+          type: boolean
+        appearance:
+          type: string
+          enum: [system, dark]
+      required: [soundEnabled, soundVolume, hapticsEnabled, motion, notificationsEnabled, appearance]
+    CreateGuildInput:
+      type: object
+      additionalProperties: false
+      properties:
+        name:
+          type: string
+          minLength: 3
+          maxLength: 36
+        description:
+          type: string
+          maxLength: 160
+      required: [name]
+    JoinGuildInput:
+      type: object
+      additionalProperties: false
+      properties:
+        joinCode:
+          type: string
+          pattern: "^ARISE-[A-F0-9]{10}$"
+      required: [joinCode]
+    ReviewGuildEvidenceInput:
+      type: object
+      additionalProperties: false
+      properties:
+        decision:
+          type: string
+          enum: [approved, rejected]
+      required: [decision]
+    GuildSubmissionInput:
+      type: object
+      additionalProperties: false
+      properties:
+        studyEventId:
+          type: string
+          minLength: 1
+          maxLength: 240
+        evidenceNote:
+          type: string
+          maxLength: 500
+      required: [studyEventId]
+    Guild:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        name:
+          type: string
+          minLength: 3
+          maxLength: 36
+        description:
+          type: string
+          maxLength: 160
+        joinCode:
+          type: string
+          pattern: "^ARISE-[A-F0-9]{10}$"
+        memberCount:
+          type: integer
+          minimum: 0
+          maximum: 12
+        role:
+          type: string
+          enum: [leader, member]
+        tournamentDate:
+          type: string
+          format: date
+        createdAt:
+          type: string
+          format: date-time
+      required: [id, name, description, joinCode, memberCount, role, tournamentDate, createdAt]
+    GuildListResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        guilds:
+          type: array
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/Guild"
+      required: [guilds]
+    GuildMember:
+      type: object
+      additionalProperties: false
+      properties:
+        displayName:
+          type: string
+          minLength: 1
+          maxLength: 48
+        role:
+          type: string
+          enum: [leader, member]
+        joinedAt:
+          type: string
+          format: date-time
+        points:
+          type: integer
+          minimum: 0
+          maximum: 100000
+        isYou:
+          type: boolean
+      required: [displayName, role, joinedAt, points, isYou]
+    GuildStudyEvent:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: string
+          minLength: 1
+          maxLength: 240
+        eventType:
+          type: string
+          maxLength: 48
+        eventDate:
+          type: string
+          format: date
+        occurredAt:
+          type: string
+          format: date-time
+      required: [id, eventType, eventDate, occurredAt]
+    GuildSubmission:
+      type: object
+      additionalProperties: false
+      properties:
+        id:
+          type: integer
+          minimum: 1
+        displayName:
+          type: string
+          minLength: 1
+          maxLength: 48
+        eventType:
+          type: string
+          maxLength: 48
+        tournamentDate:
+          type: string
+          format: date
+        evidenceNote:
+          type: [string, "null"]
+          maxLength: 500
+        status:
+          type: string
+          enum: [pending, approved, rejected]
+        submittedAt:
+          type: string
+          format: date-time
+        reviewedAt:
+          type: [string, "null"]
+          format: date-time
+        isMine:
+          type: boolean
+      required: [id, displayName, eventType, tournamentDate, evidenceNote, status, submittedAt, reviewedAt, isMine]
+    GuildPendingReview:
+      type: object
+      additionalProperties: false
+      properties:
+        submissionId:
+          type: integer
+          minimum: 1
+        displayName:
+          type: string
+          minLength: 1
+          maxLength: 48
+        eventType:
+          type: string
+          maxLength: 48
+        tournamentDate:
+          type: string
+          format: date
+        evidenceNote:
+          type: [string, "null"]
+          maxLength: 500
+        submittedAt:
+          type: string
+          format: date-time
+      required: [submissionId, displayName, eventType, tournamentDate, evidenceNote, submittedAt]
+    GuildAchievement:
+      type: object
+      additionalProperties: false
+      properties:
+        kind:
+          type: string
+          enum: [three-contributors]
+        title:
+          type: string
+          maxLength: 80
+        tournamentDate:
+          type: string
+          format: date
+        awardedAt:
+          type: string
+          format: date-time
+      required: [kind, title, tournamentDate, awardedAt]
+    GuildDetailsResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        guild:
+          $ref: "#/components/schemas/Guild"
+        members:
+          type: array
+          maxItems: 12
+          items:
+            $ref: "#/components/schemas/GuildMember"
+        leaderboard:
+          type: array
+          maxItems: 12
+          items:
+            $ref: "#/components/schemas/GuildMember"
+        eligibleEvents:
+          type: array
+          maxItems: 20
+          items:
+            $ref: "#/components/schemas/GuildStudyEvent"
+        mySubmissions:
+          type: array
+          maxItems: 10
+          items:
+            $ref: "#/components/schemas/GuildSubmission"
+        pendingReviews:
+          type: array
+          maxItems: 50
+          items:
+            $ref: "#/components/schemas/GuildPendingReview"
+        achievements:
+          type: array
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/GuildAchievement"
+      required: [guild, members, leaderboard, eligibleEvents, mySubmissions, pendingReviews, achievements]
+    GuildLeaveResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        guildId:
+          type: integer
+          minimum: 1
+        closed:
+          type: boolean
+      required: [guildId, closed]
+    GuildError:
+      type: object
+      additionalProperties: false
+      properties:
+        error:
+          type: string
+          maxLength: 240
+      required: [error]
+    StudyProfile:
+      type: object
+      additionalProperties: false
+      properties:
+        profileId:
+          type: string
+          minLength: 1
+          maxLength: 80
+        accountCode:
+          type: string
+          pattern: "^ARISE-[A-Z0-9]{4}-[A-Z0-9]{4}$"
+        displayName:
+          type: string
+          minLength: 1
+          maxLength: 48
+        settings:
+          $ref: "#/components/schemas/ProfileSettings"
+      required: [profileId, accountCode, displayName, settings]
+    CreateStudyProfileInput:
+      type: object
+      additionalProperties: false
+      properties:
+        displayName:
+          type: string
+          minLength: 1
+          maxLength: 48
+        state:
+          $ref: "#/components/schemas/StudyProgress"
+      required: [displayName, state]
+    CreateStudyProfileResult:
+      allOf:
+        - $ref: "#/components/schemas/StudyProfile"
+        - type: object
+          additionalProperties: false
+          properties:
+            recoveryKey:
+              type: string
+              minLength: 32
+              maxLength: 64
+            accessToken:
+              type: string
+              minLength: 1
+              maxLength: 4096
+          required: [recoveryKey, accessToken]
+    PrepareStudyProfileRestoreInput:
+      type: object
+      additionalProperties: false
+      properties:
+        accountCode:
+          type: string
+          minLength: 1
+          maxLength: 24
+        recoveryKey:
+          type: string
+          minLength: 32
+          maxLength: 128
+      required: [accountCode, recoveryKey]
+    PreparedStudyProfileRestore:
+      type: object
+      additionalProperties: false
+      properties:
+        candidateToken:
+          type: string
+          minLength: 1
+          maxLength: 4096
+        accountCode:
+          type: string
+          pattern: "^ARISE-[A-Z0-9]{4}-[A-Z0-9]{4}$"
+      required: [candidateToken, accountCode]
+    ConfirmStudyProfileRestoreInput:
+      type: object
+      additionalProperties: false
+      properties:
+        candidateToken:
+          type: string
+          minLength: 1
+          maxLength: 4096
+      required: [candidateToken]
+    StudyProfileSessionResponse:
+      allOf:
+        - $ref: "#/components/schemas/StudyProfile"
+        - type: object
+          additionalProperties: false
+          properties:
+            accessToken:
+              type: string
+              minLength: 1
+              maxLength: 4096
+          required: [accessToken]
+    UpdateStudyProfileInput:
+      type: object
+      additionalProperties: false
+      minProperties: 1
+      properties:
+        displayName:
+          type: string
+          minLength: 1
+          maxLength: 48
+        settings:
+          $ref: "#/components/schemas/ProfileSettings"
+    StudyProfileError:
+      type: object
+      additionalProperties: false
+      properties:
+        error:
+          type: string
+          maxLength: 240
+      required: [error]
+

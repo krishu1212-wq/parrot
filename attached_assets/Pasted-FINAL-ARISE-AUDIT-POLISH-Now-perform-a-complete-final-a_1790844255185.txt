@@ -1,0 +1,235 @@
+FINAL ARISE AUDIT + POLISH
+
+Now perform a complete final audit of ARISE: The Solo Leaving against the full feature specification already established for this project.
+
+IMPORTANT:
+- Do NOT rebuild the app from scratch.
+- Do NOT reset, delete, migrate away, or overwrite existing user study progress.
+- Preserve all existing XP, levels, rank, streaks, completed quests, Maths progress, NCERT progress, Black Book progress, vocabulary progress, calculation history, and batch data.
+- Do not remove any currently working feature.
+- Inspect the existing implementation first.
+- Test the actual Preview and relevant screens/interactions.
+- Fix only genuine missing, broken, incomplete, or inconsistent functionality.
+- Do not add random new features outside this specification.
+
+FINAL FEATURE CHECKLIST
+
+1. HOME / STATUS
+- ARISE branding
+- futuristic original System-style UI
+- Level
+- Rank
+- XP
+- Streak
+- Daily Quest progress
+- Today's quests
+- Progress indicators
+- System notifications
+- Next Best Action
+
+2. PHASE SYSTEM
+- Phase 1 contains:
+  Maths
+  NCERT Reading
+  NCERT Vocabulary
+  Black Book Vocabulary
+  Timed Calculation Practice
+  Morning Workout
+- Phase 2 unlocks only after the required Phase 1 completion.
+- Phase 2 contains Reasoning and English.
+- Maths and Black Book revision continue after Phase 2 unlock.
+- Locked content must remain visibly locked until requirements are met.
+
+3. DAILY QUEST SYSTEM
+Daily order:
+1. Morning workout
+2. Black Book vocabulary — 1 page
+3. Timed calculation practice
+4. Maths — 1 lecture
+5. NCERT reading
+6. NCERT vocabulary — note and learn
+
+Verify:
+- checkboxes
+- XP rewards
+- duplicate-completion prevention
+- streak handling
+- missed quest/recovery behavior
+- persistence after app restart
+- correct new-day behavior
+
+4. MATHS SYSTEM
+- Subject/topic structure
+- Lecture tracking
+- completed/remaining lectures
+- topic progress
+- batch-aware progress
+- XP integration
+- current/next lecture
+- revision support
+
+5. REASONING + ENGLISH
+- Phase 2 lock/unlock
+- topic structure
+- lecture tracking
+- progress
+- batch-aware totals
+- completion and XP integration
+
+6. BATCH SYSTEM — VERY IMPORTANT
+The user will take a different SSC CGL batch in the future.
+
+The app MUST allow:
+- creating/selecting a new batch
+- different subjects/topics per batch
+- different lecture counts per topic
+- more or fewer lectures than the previous batch
+- changing topic/lecture structure without changing app source code
+- preserving old batch history
+- never mixing progress between batches
+- Home progress reflecting the currently selected batch
+- lecture completion belonging to the correct batch
+
+Use the existing batch architecture if already implemented. Do not replace it unnecessarily.
+
+7. NCERT
+- book/library flow
+- adaptive targets because books have different sizes
+- reading progress
+- NCERT vocabulary
+- persistence
+- no progress reset
+
+8. BLACK BOOK
+Preserve the existing 306-page structure:
+- One Word — 67
+- Idioms — 70
+- Synonyms/Antonyms — 75
+- Phrasal Verbs — 22
+- Fixed Preposition — 15
+- The Hindu Vocabulary — 37
+- Homonyms — 20
+
+Verify:
+- 1 page per study day
+- correct category order
+- no duplicate daily completion
+- persistence
+- next-day assignment
+
+9. CALCULATION PRACTICE
+- timed practice
+- completion/result tracking
+- history
+- XP/progress integration
+
+10. SATURDAY BOSS TEST
+- test based on material studied during that week
+- identify weak areas
+- show results
+- connect weak areas to future revision/practice
+
+11. SUNDAY RECOVERY DAY
+- recovery-day flow
+- pending/missed quest recovery
+- no harmful or physical punishment
+- safe XP/recovery mechanics
+
+12. AI STUDY COACH
+Verify the existing:
+- AI assistant
+- Next Best Action
+- Read → Recall
+- Mistake Explanation
+- One More Question
+- Concept Map
+- Personal Records
+- Wind-down reminder
+- 7-Day Experiment
+- optional Voice Coach if already implemented
+
+13. LECTURE TRACKER
+- external lecture links
+- multiple sources
+- save lecture
+- start/session tracking
+- manual completion
+- XP update
+- subject/topic/batch progress update
+- Next Best Action integration
+- clearly handle the limitation that external apps cannot automatically report watch completion unless an official integration/API exists
+
+14. ANIMATIONS
+Verify existing:
+- XP gain
+- quest completion
+- level-up
+- phase unlock
+- achievement unlock
+- System notification/glow
+- subtle System Core animation
+- lightweight Android performance
+- reduced-motion consideration
+
+15. SOUND
+If the sound system already exists, verify:
+- XP
+- quest complete
+- level up
+- unlock
+- streak
+- achievement
+- Boss Test
+- System notification sounds
+- ON/OFF
+- volume control
+- original/licensed sounds only
+
+Do not add copyrighted sounds.
+
+16. DATA SAFETY
+Verify:
+- AsyncStorage/persistence
+- app restart
+- reload
+- malformed stored data
+- storage failure handling
+- new calendar day handling
+- no accidental progress reset
+- no duplicate XP
+- batch isolation
+
+17. UI / UX
+Check:
+- mobile layout
+- navigation
+- buttons
+- scrolling
+- loading states
+- empty states
+- error states
+- locked states
+- readability
+- touch targets
+- consistent ARISE visual identity
+
+18. TECHNICAL QUALITY
+- run TypeScript/typecheck
+- run relevant tests
+- verify Preview
+- fix runtime errors
+- fix broken imports/dependencies
+- avoid unnecessary dependencies
+- keep Android-friendly performance
+
+FINAL RULE:
+First audit and report what is actually missing or broken.
+Then fix those issues.
+Do not change working features merely for the sake of changing them.
+After fixes, run a final verification of the Preview and affected flows.
+
+At the end, provide a concise completion report containing:
+- features verified
+- issues fixed
+- anything that genuinely remains incomplete
+- confirmation that existing study progress was preserved.

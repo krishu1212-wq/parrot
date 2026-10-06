@@ -1,0 +1,83 @@
+ARISE 46-Point Blueprint — STEP 1
+
+Implement ONLY the persistence/history foundation for Points 41, 19, 3 and 20.
+
+IMPORTANT:
+- Do NOT redesign the UI.
+- Do NOT implement Rank, Gate, Inventory, Equipment, Sound, Cinematic Opening, or any other future feature yet.
+- Preserve all existing user progress, XP totals, quests, lectures, NCERT, vocabulary, calculation, Boss, achievements, batches and existing reward behavior.
+- Do not fabricate historical data or old records that cannot be proven.
+
+Requirements:
+
+1. Create a durable unified System Event Log.
+Track timestamped events for:
+- quest started/completed/missed
+- XP awarded
+- level up
+- rank change
+- achievement unlocked
+- study activity
+- lecture completion
+- NCERT progress/completion
+- vocabulary activity
+- calculation session
+- Boss activity
+- recovery activity
+- important System notifications/events
+
+Each event should have a stable ID, event type, timestamp, and enough metadata to understand what happened.
+
+2. Create durable XP Event History.
+Every future XP award must create exactly one XP history event.
+Include:
+- amount
+- source/type
+- related quest/activity ID when available
+- timestamp
+- duplicate/idempotency key
+
+Do not double-award XP if the same canonical action is processed again.
+
+3. Create durable Personal Records foundation.
+Track only records that can be proven from actual app activity:
+- highest daily XP
+- longest streak
+- most lectures completed
+- best calculation result
+- best Boss result when Boss scoring exists
+- most NCERT pages completed
+- other verified academic records
+
+Do not infer unknown historical records from current totals.
+
+4. Make records persistent across app reloads.
+Use the existing persistence architecture and preserve existing storage keys/schema compatibility.
+Do not replace existing data destructively.
+
+5. Add safe migration/default handling.
+Old users with no event history should receive an empty history, not fabricated events.
+Malformed new history data must not crash the app.
+
+6. Prevent duplicate events/rewards.
+Use stable idempotency keys wherever possible.
+
+7. Add tests for:
+- XP event persistence
+- duplicate XP event prevention
+- event log persistence after reload
+- personal record updates
+- empty/legacy data migration
+- malformed history safety
+- persistence race/concurrent write protection if the existing architecture supports it
+
+8. Run the relevant existing tests plus the new tests.
+
+At the end, report:
+- files changed
+- schema/storage changes
+- tests executed and results
+- confirmation that existing progress was preserved
+- any remaining limitations
+
+Do not implement anything outside this step.

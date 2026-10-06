@@ -1,0 +1,251 @@
+ARISE INTRO / ONBOARDING — IMPLEMENT THE ATTACHED REFERENCE DESIGN
+
+Use the attached onboarding reference image as the PRIMARY visual design reference.
+
+Create a premium 4-screen ARISE onboarding experience based on this reference.
+
+IMPORTANT:
+- This is the INTRO shown to a new user before entering the main ARISE dashboard.
+- Preserve the visual style, composition, richness, spacing, glow, artwork quality and cinematic feeling of the reference.
+- Use ORIGINAL ARISE artwork. Do not copy copyrighted anime characters, logos or artwork.
+- The result must feel like a premium futuristic RPG/System study app.
+
+SCREEN 1 — SYSTEM AWAKENING
+
+Show:
+ARISE
+STUDY SYSTEM
+
+Tagline:
+"Discipline Today.
+A Stronger You Tomorrow."
+
+Visual:
+- original futuristic portal
+- blue/cyan energy
+- crystals
+- particles
+- atmospheric environment
+- original silhouetted ARISE character
+- strong cinematic lighting
+
+Button:
+GET STARTED →
+
+Add:
+SKIP
+
+Animation:
+- portal energy slowly moves
+- particles float
+- ARISE logo fades/glows in
+- button has subtle breathing glow
+
+SCREEN 2 — TURN YOUR STUDY INTO A GAME
+
+Title:
+"Turn Your Study
+Into a Game"
+
+Subtitle:
+"Complete daily missions, earn XP,
+level up and become a better you."
+
+Show holographic cards:
+- Daily Missions
+- XP
+- Level Up
+- Rewards
+
+Use original icons/artwork.
+
+Button:
+NEXT →
+
+Animation:
+- cards appear one-by-one
+- XP crystal glows
+- particles move
+- subtle holographic scanline
+
+SCREEN 3 — TRACK PROGRESS EVERY DAY
+
+Title:
+"Track Progress
+Every Day"
+
+Subtitle:
+"Stay consistent with streaks,
+detailed progress and achievements."
+
+Show:
+- Streak
+- Today's Progress
+- Maths
+- NCERT Reading
+- Vocabulary
+- Mock/Test progress
+- achievement indicators
+
+Use realistic UI preview but DO NOT connect these onboarding examples to actual user study data.
+
+Button:
+NEXT →
+
+SCREEN 4 — LEVEL UP YOUR FUTURE
+
+Title:
+"Level Up
+Your Future"
+
+Subtitle:
+"Build discipline, improve your skills
+and unlock your potential with ARISE."
+
+Show:
+- futuristic city/portal
+- original ARISE character
+- glowing tower
+- achievement icons
+- crown
+- progress symbol
+- star/reward
+
+Bottom:
+BETTER DISCIPLINE
+REAL PROGRESS
+A STRONGER YOU
+
+Button:
+LET'S BEGIN →
+
+==================================================
+ANIMATION
+==================================================
+
+Screen transitions:
+- smooth horizontal slide
+- fade
+- subtle parallax
+- particles remain alive
+- artwork slowly moves
+- button glow pulses
+
+On final "LET'S BEGIN":
+1. Screen brightness increases.
+2. ARISE emblem appears.
+3. Energy expands from center.
+4. Short cinematic flash.
+5. Navigate to the existing ARISE Home/Dashboard.
+
+Do not create a new dashboard.
+
+==================================================
+SOUND
+==================================================
+
+Use ORIGINAL or properly licensed futuristic sounds.
+
+Screen transition:
+soft system chime
+
+Screen 1:
+ambient system activation
+
+Screen 2:
+soft XP/UI sound
+
+Screen 3:
+achievement/progress chime
+
+Screen 4:
+strong but short ARISE activation sound
+
+LET'S BEGIN:
+cinematic confirmation sound
+
+Respect global sound ON/OFF and volume settings.
+
+If sound assets are unavailable, continue silently without crashing.
+
+==================================================
+DESIGN
+==================================================
+
+Use:
+- deep black/navy
+- electric blue
+- cyan
+- white
+- gold
+- purple accents
+- green success accents
+
+Use:
+- glass HUD panels
+- angular borders
+- holographic effects
+- neon glow
+- crystals
+- particles
+- futuristic typography
+
+Do NOT make it a simple blue screen.
+
+==================================================
+ANDROID
+==================================================
+
+Must work on:
+- small Android phones
+- large Android phones
+- Web
+
+Respect:
+- safe areas
+- notches
+- different aspect ratios
+- reduced motion
+
+Keep animations lightweight and Android-friendly.
+
+==================================================
+DATA SAFETY
+==================================================
+
+Do NOT modify:
+- existing study data
+- XP
+- level
+- rank
+- quests
+- achievements
+- persistence
+- navigation logic
+
+Only add the onboarding/intro experience.
+
+The onboarding should be shown only when appropriate for a new user.
+
+Existing users should not be forced through the intro again unless the existing onboarding state says so.
+
+==================================================
+FINAL QUALITY BAR
+==================================================
+
+The attached reference is the visual quality target.
+
+If the result looks like a generic React Native onboarding screen, it is NOT finished.
+
+It must feel like:
+
+ARISE SYSTEM ACTIVATED
+
+Cinematic.
+Futuristic.
+Premium.
+RPG/System.
+Energetic.
+Original.
+Smooth.
+Android-friendly.

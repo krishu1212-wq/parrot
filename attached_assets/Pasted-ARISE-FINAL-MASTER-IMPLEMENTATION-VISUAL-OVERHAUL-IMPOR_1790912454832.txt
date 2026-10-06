@@ -1,0 +1,1334 @@
+ARISE FINAL MASTER IMPLEMENTATION + VISUAL OVERHAUL
+
+IMPORTANT:
+This is the final major implementation pass for ARISE Study System.
+I have limited Agent credits, so DO NOT split this work into multiple feature requests, DO NOT stop after only a visual change, and DO NOT repeatedly ask me to approve individual features.
+
+Use the existing ARISE codebase as the source of truth.
+Preserve all currently working functionality, saved study data, XP, quests, lectures, NCERT progress, vocabulary, Boss data, Google/cloud logic, persistence and existing tests.
+
+Do NOT rebuild working systems unnecessarily.
+Do NOT reset or delete existing user data.
+Do NOT replace real data with fake/demo data.
+
+The goal is to complete the remaining ARISE blueprint AND perform a serious visual overhaul in ONE coherent implementation pass.
+
+==================================================
+1. VISUAL DIRECTION — VERY IMPORTANT
+==================================================
+
+The current UI is too plain, uses too few colors, and background images are interfering with text.
+
+Do NOT make another simple blue-card dashboard.
+
+Create a premium futuristic dark-fantasy RPG/System HUD aesthetic inspired by the visual LANGUAGE of the reference screenshots I provided, but create ORIGINAL ARISE artwork and UI.
+
+Do not copy any copyrighted anime character, logo, exact artwork, exact screen, or trademarked asset.
+
+The references should guide:
+- composition
+- hierarchy
+- dramatic framing
+- lighting
+- color richness
+- iconography
+- holographic panels
+- status windows
+- reward presentation
+- cinematic feeling
+- visual density
+- positioning
+
+ARISE must have its own identity.
+
+COLOR SYSTEM:
+Use a rich multi-color palette, not only cyan/blue.
+
+Base:
+- near-black
+- deep navy
+- charcoal
+- midnight blue
+
+Primary energy:
+- electric cyan
+- ice blue
+
+Secondary:
+- violet
+- purple
+- magenta
+
+Additional functional colors:
+- gold
+- amber
+- green
+- emerald
+- red/crimson
+- orange
+- white/silver
+
+Use colors semantically:
+cyan = system/normal
+blue = progress/knowledge
+violet = special
+purple = awakening/rank
+gold = legendary/reward
+green = completed/success
+red = warning/Boss/danger
+orange = active challenge
+silver/white = elite/status
+
+Do not use every color randomly.
+Use controlled gradients, glow, borders and accent lighting.
+
+==================================================
+2. READABILITY RULE — ABSOLUTE PRIORITY
+==================================================
+
+The screenshot currently has artwork behind text which makes text unreadable.
+
+FIX THIS COMPLETELY.
+
+Artwork must NEVER make important text difficult to read.
+
+Use:
+- dark translucent overlays
+- gradient scrims
+- glass panels
+- solid dark content surfaces
+- strong contrast
+- controlled opacity
+- text shadows where appropriate
+- clear spacing
+- readable font sizes
+- hierarchy between title/subtitle/body
+- safe areas around artwork
+
+Background artwork should occupy designated visual areas, not cover important information.
+
+For every screen:
+CONTENT FIRST.
+ARTWORK SECOND.
+
+Do not place high-detail artwork directly behind small text.
+
+Use artwork as:
+- hero/header illustration
+- side/edge illustration
+- framed panel artwork
+- reward reveal artwork
+- Boss/Gate artwork
+- Guardian artwork
+- emblem artwork
+
+not as an uncontrolled full-screen image behind every card.
+
+==================================================
+3. SYSTEM CORE + HOME DASHBOARD
+==================================================
+
+Transform Home into a real ARISE System Dashboard.
+
+Include:
+- ARISE emblem/logo
+- original central System Core
+- animated energy ring/core
+- Level
+- XP
+- Rank
+- XP progress
+- Streak
+- daily quest progress
+- Daily Mission Briefing
+- Next Best Action
+- Weakness Radar
+- Journey progress
+- Phase progress
+- Achievement/relic preview
+- active Gate
+- Weekly Boss
+- system notifications
+
+Create visual hierarchy similar to a real game HUD.
+
+Hero area:
+ARISE SYSTEM CORE
+LEVEL XX
+RANK XX
+XP XXXX / XXXX
+
+Use circular/radial XP visualization rather than only plain horizontal cards where appropriate.
+
+Create distinct sections instead of one giant stack of identical cards.
+
+==================================================
+4. ORIGINAL ARISE ARTWORK SYSTEM
+==================================================
+
+Create/reuse original visual assets for:
+
+- ARISE System Core
+- Rank emblems
+- Guardians
+- Gate portals
+- Boss/Warden
+- relics
+- reward chest
+- XP crystal
+- Gate Key
+- Revision Token
+- Life Potion
+- Study Coins
+- Relic Fragment
+- quest icons
+- achievement icons
+- phase emblems
+
+Use artwork consistently throughout the application.
+
+Do not use random stock photos.
+
+Do not use low-quality generic emoji as the primary artwork.
+
+Use SVG/vector/CSS-generated/original assets where practical so the Android app remains lightweight.
+
+==================================================
+5. RANK SYSTEM
+==================================================
+
+Implement full:
+
+E
+D
+C
+B
+A
+S
+SS
+SSS
+Hidden
+Transcendent
+
+Requirements:
+- rank requirements
+- XP progression
+- rank emblem
+- rank aura
+- rank-specific color identity
+- rank-up animation
+- rank-up announcement
+- unlocks
+- rank history
+- rank progression display
+
+IMPORTANT:
+Do not determine artwork by first character of the rank string.
+SS, SSS, Hidden and Transcendent must have distinct artwork.
+
+Suggested visual identities:
+E = steel/gray
+D = blue
+C = cyan
+B = green
+A = violet
+S = gold
+SS = crimson/violet
+SSS = radiant multi-energy
+Hidden = black/iridescent
+Transcendent = white/gold/cosmic
+
+Keep progression balanced and based on existing ARISE XP logic.
+
+==================================================
+6. LEVEL + XP
+==================================================
+
+XP must be connected to real activity.
+
+Support XP from:
+- quests
+- study
+- lectures
+- practice
+- NCERT
+- vocabulary
+- calculation
+- Boss
+- Gate
+- achievements
+
+Prevent duplicate rewards.
+
+Persist:
+- XP
+- level
+- XP history
+- dated XP events
+
+Show XP gain animation:
++XP
+source
+small energy burst
+progress movement
+
+==================================================
+7. QUEST SYSTEM
+==================================================
+
+Support:
+- Daily
+- Weekly
+- Long-term
+- Special
+- Boss
+- Gate
+- Recovery
+- Completed
+
+Daily six core missions:
+1. Workout
+2. Black Book 1 page
+3. Timed calculation
+4. Maths 1 lecture
+5. NCERT reading
+6. NCERT vocabulary note + learn
+
+Every quest should support:
+- artwork/icon
+- difficulty
+- XP
+- progress
+- lock state
+- completion
+- quest type
+- history/archive
+
+Create better quest cards:
+not just plain rectangles.
+
+Use:
+icon + title + difficulty + progress + reward + state.
+
+==================================================
+8. DAILY BRIEFING
+==================================================
+
+Create a dramatic System Briefing screen:
+
+TODAY'S SYSTEM BRIEFING
+
+Show:
+- today's missions
+- priority
+- estimated time
+- streak
+- XP
+- level
+- rank
+- weak area
+- pending mission
+- Begin Mission
+- Next Best Action
+
+Weakness information must come from real stored data.
+Never fabricate weaknesses.
+
+==================================================
+9. FOCUS / MISSION MODE
+==================================================
+
+Current mission
+Timer
+Progress
+Focus state
+AI Coach
+optional DND
+completion
+
+Session summary:
+- time
+- accuracy
+- XP
+- task
+- next action
+
+Support:
+25-minute focus
+50-minute focus
+break timer
+
+Persist focus/break history.
+
+==================================================
+10. STUDY JOURNEY
+==================================================
+
+Journey path:
+
+Foundation
+→ Maths
+→ NCERT
+→ Vocabulary
+→ Phase 2
+→ Reasoning
+→ English
+→ Revision
+→ Boss
+
+Show:
+- locked/unlocked
+- progress
+- Guardians
+- current mission
+- next mission
+- XP
+- achievements
+- Next Action
+
+Make it visually feel like a progression map rather than a list.
+
+==================================================
+11. PHASE SYSTEM
+==================================================
+
+Phase 1:
+Maths
+NCERT
+Vocabulary
+Calculation
+Basics
+
+Phase 2:
+Reasoning
+English
+Advanced Revision
+
+Keep current working unlock logic.
+
+Improve:
+- emblem
+- animation
+- transition
+- visual identity
+- notification
+- optional sound integration
+
+==================================================
+12. GATE / DUNGEON SYSTEM
+==================================================
+
+Implement the missing Gate system fully.
+
+Gate types:
+- Normal Gate
+- Difficult Gate
+- Special Gate
+- Boss Gate
+
+Each Gate:
+- original Gate artwork
+- Gate emblem
+- difficulty
+- required level
+- required rank
+- time limit
+- eligibility
+- lock/unlock
+- Enter Gate
+
+Gate flow:
+
+LOCKED GATE
+↓
+ELIGIBILITY
+↓
+ENTER GATE
+↓
+GATE OPEN ANIMATION
+↓
+CHALLENGE
+↓
+CLEAR / FAIL
+↓
+REWARD CHEST
+↓
+REWARD REVEAL
+↓
+XP + items + progression
+↓
+Gate history
+
+Gate opening animation should be visually impressive:
+energy accumulation
+portal ring
+particles
+light burst
+holographic UI
+portal activation
+
+NOT a plain modal saying "Gate Open".
+
+==================================================
+13. WEEKLY BOSS
+==================================================
+
+Keep existing weekly Boss functionality.
+
+Add:
+- original Boss/Warden artwork
+- Boss intro animation
+- Boss level
+- HP/progress visualization
+- threat level
+- weekly content
+- questions
+- difficulty
+- start screen
+- results
+- XP
+- rewards
+- weak topics
+- mistakes
+- accuracy
+- revision
+- retest
+- history
+
+Create a proper:
+BOSS START
+→ BOSS CHALLENGE
+→ RESULT
+→ REWARD
+→ REVISION
+→ RETEST
+
+loop.
+
+Do not fabricate grading.
+Use actual stored/self-marked evidence where applicable.
+
+==================================================
+14. GUARDIANS
+==================================================
+
+Use original Guardian artwork for:
+
+Maths
+NCERT
+Vocabulary
+Reasoning
+English
+
+Guardians should appear in:
+- Journey
+- subject screens
+- Gates
+- Boss
+- relevant cards
+
+Each Guardian should have distinct visual identity.
+
+==================================================
+15. WEAKNESS RADAR
+==================================================
+
+Create a real data-driven Radar.
+
+Track:
+- practice accuracy
+- mistakes
+- Boss topics
+- lecture/topic performance
+- calculation performance
+- vocabulary performance where data exists
+
+Show:
+Strong
+Developing
+Weak
+Insufficient Data
+
+Never invent data.
+
+For weak areas:
+Concept Revision
+→ Practice
+→ Retest
+
+Connect Weakness Radar to:
+- Next Action
+- Practice
+- Boss
+- Lecture
+- Journey
+
+==================================================
+16. STATUS / HUNTER STATS
+==================================================
+
+Create full Status Window.
+
+Show:
+- Level
+- Rank
+- XP
+- Streak
+- Phase
+- achievements
+- relics
+- records
+- overall progress
+
+Subject stats:
+- Maths
+- NCERT
+- Vocabulary
+- Calculation
+- Reasoning
+- English
+
+Overall:
+- Study
+- Focus/Consistency
+
+Use attractive stat bars/radars/cards where useful.
+
+Do not add body-image, BMI, calorie or appearance tracking.
+
+This is a STUDY RPG.
+
+==================================================
+17. INVENTORY
+==================================================
+
+Create a real Inventory screen.
+
+Items:
+
+❤️ Fictional Life Potion
+🔷 XP Crystal
+🗝️ Gate Key
+🌀 Revision Token
+💎 Relic Fragment
+🪙 Study Coins
+and future quest items.
+
+Each item:
+- original artwork/icon
+- name
+- rarity
+- quantity
+- description
+- inspect
+- use where appropriate
+
+Inventory persists.
+
+Rarity:
+Common
+Rare
+Epic
+Legendary
+Mythic
+
+Use distinct visual treatment for each rarity.
+
+Do NOT make Life Potion a real-world health/medical product.
+It is a purely fictional RPG study-system item.
+
+==================================================
+18. EQUIPMENT / LOADOUT
+==================================================
+
+Create Equipment screen.
+
+Slots/categories:
+- XP Boost
+- Quest Modifier
+- Revision Token
+- Gate Entry Item
+- Special Study Boost
+- Achievement Relic
+
+Support:
+- equip
+- unequip
+- inspect
+- effect
+- persistence
+
+Effects must be balanced.
+
+No pay-to-win mechanics.
+
+Equipment should visibly appear on the Status/Profile screen.
+
+==================================================
+19. REWARDS
+==================================================
+
+Rewards must actually connect to progression.
+
+Quest completion can grant:
+XP
+Study Coins
+Revision Token
+Relic Fragment
+other appropriate items
+
+Gate completion:
+XP
+coins
+items
+relic fragments
+keys depending on difficulty
+
+Boss:
+XP
+achievement progress
+special reward
+
+Achievement:
+XP/item/relic where appropriate
+
+Create reward chest animation:
+
+CHEST APPEARS
+→ ENERGY BUILDUP
+→ CHEST OPENS
+→ LIGHT BURST
+→ ITEM REVEAL
+→ RARITY COLOR
+→ ITEM NAME
+→ QUANTITY
+→ COLLECT
+
+==================================================
+20. ACHIEVEMENTS + RELICS
+==================================================
+
+Support:
+- 7-day streak
+- 30-day streak
+- first Boss
+- 100 lectures
+- NCERT achievements
+- Vocabulary achievements
+- Calculation Master
+- rank achievements
+- Gate achievements
+- other meaningful real conditions
+
+No fake unlocks.
+
+Relics must integrate with Inventory and Equipment.
+
+==================================================
+21. STREAK + COMBO
+==================================================
+
+Persistent:
+- daily streak
+- quest completion streak
+- combo
+- milestones
+
+Add:
+- streak animation
+- combo display
+- milestone reward
+
+==================================================
+22. HISTORY / SYSTEM LOG
+==================================================
+
+Create unified System History.
+
+Record:
+- quests
+- XP
+- level-up
+- rank-up
+- Gate
+- Boss
+- achievements
+- study
+- lecture
+- NCERT
+- vocabulary
+- calculation
+- system events
+
+Each record:
+timestamp
+event type
+summary
+relevant XP/reward where applicable
+
+Do not destroy existing historical data.
+
+==================================================
+23. PERSONAL RECORDS
+==================================================
+
+Persist:
+- highest daily XP
+- longest streak
+- most lectures
+- best Boss score
+- most NCERT pages
+- best calculation accuracy
+- most correct calculation
+- study records
+
+Use true historical data.
+
+==================================================
+24. ANALYTICS
+==================================================
+
+Add:
+- weekly XP
+- monthly XP
+- study time
+- accuracy
+- subject progress
+- weak/strong areas
+- streak history
+- lecture progress
+- NCERT progress
+
+Use real data.
+
+Do not display invented charts.
+
+==================================================
+25. NCERT
+==================================================
+
+Preserve current NCERT system.
+
+Add:
+- adaptive targets
+- small/large book logic
+- reading progress
+- vocabulary extraction
+- Learn
+- Recall
+- completion
+
+==================================================
+26. VOCABULARY
+==================================================
+
+Black Book:
+1 page/day
+
+NCERT vocabulary:
+collect words
+
+Word flow:
+Learn
+→ Recall
+→ Practice
+→ Revision
+
+Track progress.
+
+==================================================
+27. TIMED CALCULATION
+==================================================
+
+Keep timed calculation.
+
+Add:
+- daily challenge
+- timer
+- accuracy
+- speed
+- mistakes
+- personal best
+- improvement trend
+- question-level wrong retention
+
+==================================================
+28. LECTURE TRACKER + DYNAMIC BATCH
+==================================================
+
+Preserve current multiple-batch functionality.
+
+Support:
+- multiple batches
+- subjects
+- topics
+- lectures
+- links
+- start
+- in-progress
+- completed
+- XP
+- progress
+- Next Action
+
+Do not claim automatic Careerwill integration unless an official API exists.
+
+==================================================
+29. AI COACH
+==================================================
+
+AI Coach should support:
+- doubt solving
+- concept guidance
+- mistake explanation
+- one more question
+- Read → Recall
+- Next Action
+- weakness recommendation
+- revision guidance
+
+Recommendations must use actual stored study data when available.
+
+==================================================
+30. CONCEPT MAP
+==================================================
+
+Concept relationship:
+
+Concept
+→ Related
+→ Practice
+→ Mistakes
+→ Revision
+
+Persist concept relationships where practical.
+
+==================================================
+31. RECOVERY
+==================================================
+
+If a quest is missed:
+- show missed status
+- safe XP consequence if existing system uses one
+- Recovery Quest
+- catch-up mission
+- Next Action
+
+NO physical punishment.
+NO harmful challenges.
+NO real-world penalties.
+
+==================================================
+32. 7-DAY EXPERIMENT
+==================================================
+
+Support:
+- start
+- daily check-in
+- 7-day period
+- result
+- analysis
+- history
+- change strategy / continue
+
+Persist results.
+
+==================================================
+33. WIND-DOWN
+==================================================
+
+At wind-down:
+- review today's achievements
+- actual completed quests
+- tomorrow priority
+- next mission preparation
+- reminder
+- saved state
+
+==================================================
+34. WORKOUT COACH
+==================================================
+
+Keep it safe and lightweight.
+
+Support:
+- 2/3/5 minute routines
+- timer
+- completion
+- records
+- safe pacing
+- rest
+
+Do not introduce body-image tracking.
+
+==================================================
+35. SYSTEM NOTIFICATIONS
+==================================================
+
+Create polished System notifications for:
+
+NEW QUEST
+WEEKLY BOSS
+RANK ASCENSION AVAILABLE
+NEW GATE UNLOCKED
+ACHIEVEMENT UNLOCKED
+XP GAIN
+LEVEL UP
+PHASE UNLOCKED
+
+Visual:
+glow
+icon
+accent color
+subtle particle
+auto-dismiss
+reduced-motion support
+
+==================================================
+36. ANIMATIONS
+==================================================
+
+Implement polished lightweight animations:
+
+- System Core
+- XP gain
+- Quest completion
+- Level Up
+- Rank Up
+- Phase Unlock
+- Gate Unlock
+- Gate Opening
+- Boss Start
+- Boss Defeat/Clear
+- Achievement
+- Streak
+- Reward Chest
+- Item Reveal
+- Equip/Unequip
+- Notifications
+
+Animations should feel premium but remain Android-friendly.
+
+Respect reduced-motion settings.
+
+==================================================
+37. SOUND
+==================================================
+
+Add original or properly licensed lightweight SFX only.
+
+Sounds for:
+- XP
+- quest completion
+- level-up
+- rank-up
+- unlock
+- streak
+- Boss
+- achievement
+- notification
+- reward reveal
+
+Settings:
+Sound ON/OFF
+Volume
+
+Do NOT use copyrighted anime audio.
+
+If actual audio assets are unavailable, create the sound integration architecture and use safe original/licensed placeholders rather than blocking the entire build.
+
+==================================================
+38. CINEMATIC OPENING
+==================================================
+
+Create first-launch cinematic:
+
+SYSTEM ACTIVATED
+↓
+ARISE emblem appears
+↓
+energy/particles
+↓
+system message
+↓
+LEVEL
+↓
+RANK
+↓
+DAY
+↓
+HOME
+
+It must feel like a system activation sequence, not a normal onboarding form.
+
+Allow skip/replay if appropriate.
+
+Persist completion so it doesn't annoy the user every launch.
+
+==================================================
+39. GOOGLE ACCOUNT / CLOUD
+==================================================
+
+Preserve current Google sign-in/cloud work.
+
+Verify:
+- real Google sign-in
+- stable user ID
+- cloud save
+- reinstall recovery
+- local/offline mode
+- safe merge
+- ownership checks
+- no Google passwords stored
+
+Do not fake authentication.
+
+If live Google interaction cannot be automatically verified, keep the implementation intact and document the exact remaining manual verification requirement rather than breaking the app.
+
+==================================================
+40. PERSISTENCE
+==================================================
+
+Everything important must persist:
+
+XP
+level
+rank
+streak
+quests
+achievements
+lectures
+NCERT
+vocabulary
+Boss
+stats
+records
+inventory
+equipment
+history
+phase
+Gate progress
+rewards
+
+Protect against:
+- malformed data
+- duplicate rewards
+- duplicate rank events
+- accidental reset
+- race conditions
+
+Existing saved data must survive the overhaul.
+
+==================================================
+41. ANDROID OPTIMIZATION
+==================================================
+
+Prioritize:
+- small-screen readability
+- safe areas
+- touch targets
+- scrolling
+- lightweight artwork
+- smooth animation
+- reduced motion
+- memory efficiency
+- no giant background assets that destroy performance
+
+Test responsive layouts.
+
+==================================================
+42. FUTURE QUESTION ENGINE
+==================================================
+
+Keep the architecture ready for authorized study material ingestion.
+
+Future flow:
+Authorized PDF/book
+→ parse/index
+→ questions
+→ practice
+→ recall
+→ weakness
+→ Boss
+→ revision
+
+Do not scrape copyrighted material without authorization.
+
+==================================================
+43. PLAY STORE READINESS
+==================================================
+
+Prepare:
+- app name
+- package/application ID
+- version
+- icon
+- Android build configuration
+- production build configuration
+- AAB readiness
+- signing configuration structure
+- privacy/data safety preparation
+- store listing preparation
+- screenshots
+- testing checklist
+
+Do not expose signing secrets.
+
+==================================================
+44. SYSTEM DESIGN / UI COMPONENT RULES
+==================================================
+
+Create reusable ARISE components:
+
+SystemPanel
+HolographicPanel
+SystemHeader
+RankBadge
+XPBar
+XPOrb
+QuestCard
+GateCard
+BossCard
+GuardianCard
+RewardChest
+RewardReveal
+InventoryItem
+RarityBadge
+EquipmentSlot
+RelicCard
+AchievementCard
+StatPanel
+RadarChart
+JourneyNode
+SystemToast
+SystemModal
+CinematicOverlay
+
+This prevents every screen from looking like the same generic card.
+
+Use:
+- angular corners
+- hexagonal accents
+- holographic borders
+- layered panels
+- controlled glow
+- metallic details
+- energy lines
+- small particles
+- iconography
+- badges
+- seals
+- emblems
+
+==================================================
+45. LAYOUT RULES
+==================================================
+
+DO NOT:
+- put dense text over bright artwork
+- use only cyan and blue
+- use the same card style everywhere
+- use random stock photos
+- make every screen look identical
+- make huge artwork hide content
+- reduce readability for visual effects
+- replace functional screens with mockups
+
+DO:
+- use visual hierarchy
+- use strong headings
+- use readable body text
+- use icons beside important information
+- use distinct section compositions
+- use artwork strategically
+- use different visual identities for Home/Gate/Boss/Inventory/Status/Journey
+- keep content scrollable
+- maintain touch-friendly controls
+
+==================================================
+46. FINAL PHILOSOPHY
+==================================================
+
+ARISE must feel like a real Study RPG:
+
+STUDY
+↓
+QUEST
+↓
+COMPLETION
+↓
+XP
+↓
+LEVEL
+↓
+RANK
+↓
+GATE
+↓
+BOSS
+↓
+REWARD
+↓
+ACHIEVEMENT / RELIC
+↓
+STATS / RECORDS
+↓
+WEAKNESS
+↓
+NEXT BEST ACTION
+↓
+NEXT QUEST
+
+Every major system should connect to this loop.
+
+==================================================
+FINAL IMPLEMENTATION REQUIREMENTS
+==================================================
+
+Before finishing:
+
+1. Inspect existing code and reuse working systems.
+2. Implement the missing systems.
+3. Integrate rewards with actual progression.
+4. Replace weak/plain visual treatment with the ARISE visual system described above.
+5. Fix all text readability issues.
+6. Make sure background artwork never obscures important content.
+7. Use original ARISE visual assets.
+8. Preserve existing data.
+9. Do not create fake progress.
+10. Do not reset the database/storage.
+11. Do not remove existing working features.
+12. Do not stop after only making visual changes.
+13. Do not ask me to separately approve each feature.
+14. Run TypeScript/type checks.
+15. Run existing tests.
+16. Add/update focused tests for the newly implemented systems.
+17. Fix regressions.
+18. Verify the main mobile screens.
+19. Verify that navigation works.
+20. Verify inventory/reward persistence.
+21. Verify rank progression and duplicate-event protection.
+22. Verify Gate → Challenge → Reward flow.
+23. Verify Boss → Result → Reward → Revision flow.
+24. Verify reduced motion.
+25. Verify small-screen readability.
+
+IMPORTANT CREDIT CONSTRAINT:
+I have very limited Agent credits.
+Work efficiently.
+Do not spend the entire run repeatedly explaining what you plan to do.
+Implement first, test, fix, and summarize at the end.
+
+If some extremely advanced feature cannot be fully completed because of an external dependency, implement the internal architecture/UI/data model now and leave a clean documented integration point. Do not break existing functionality.
+
+FINAL OUTPUT:
+After implementation, provide a concise summary containing:
+- what was implemented
+- what existing systems were preserved
+- tests/checks run
+- any genuinely blocked external verification
+- files/components changed
+
+Do NOT claim a feature is complete unless it is actually wired into the app.
+
+ARISE should now look and behave like a premium original futuristic Study System RPG, with rich colors, meaningful artwork, emblems, rewards, Gates, Bosses, Inventory, Equipment, animations and readable information—not a plain two-color dashboard.

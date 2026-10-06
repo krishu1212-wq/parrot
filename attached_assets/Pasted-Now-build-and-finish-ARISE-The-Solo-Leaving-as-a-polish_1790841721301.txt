@@ -1,0 +1,97 @@
+Now build and finish ARISE: The Solo Leaving as a polished, production-ready SSC CGL study system.
+
+IMPORTANT:
+- Preserve all existing ARISE features, study data, progress, XP, streaks, NCERT data, Black Book data, Maths data, and existing UI.
+- Do not reset or delete any user progress.
+- Do not remove existing working features.
+- Make changes incrementally and safely.
+- Before changing anything, inspect the existing codebase and understand the current architecture.
+- After each major change, run typecheck/tests and verify the Preview.
+- Fix actual errors instead of hiding them.
+
+CURRENT PRIORITY:
+1. Finish and stabilize the Batch/Lecture Tracker system.
+2. It must support multiple future batches.
+3. Each batch can have different subjects, topics, and lecture counts.
+4. Existing batch data must remain intact.
+5. When I start a new batch later, I should be able to create/select that batch and enter its updated lecture/topic counts without changing the app code.
+6. Home, Maths, Reasoning and English progress must automatically use the currently selected batch.
+7. Keep old batch history/progress available instead of overwriting it.
+8. Lecture completion must update the correct batch/topic progress and XP.
+9. Add a clean lecture tracker UI with:
+   - Subject
+   - Topic
+   - Total lectures
+   - Completed lectures
+   - Remaining lectures
+   - Progress percentage
+   - Current/next lecture
+   - Batch name
+10. Make the tracker persistent across app restarts.
+
+ARISE CORE SYSTEM:
+- Dark futuristic original System-style UI.
+- ARISE branding.
+- Level, Rank, XP and Streak.
+- Daily Quests.
+- Safe quest completion/recovery system.
+- Maths Phase 1.
+- NCERT reading.
+- NCERT vocabulary.
+- Black Book vocabulary.
+- Timed calculation practice.
+- Morning workout.
+- Saturday Boss Test.
+- Sunday Recovery Day.
+- Phase 2 unlock after required Phase 1 completion.
+- Reasoning and English in Phase 2.
+- AI Study Coach.
+- Next Best Action.
+- Read → Recall.
+- Mistake Explanation.
+- One More Question.
+- Concept Map.
+- Personal Records.
+- Achievement system.
+- Streak/combo system.
+- Training map and skill tree.
+- Lecture Tracker.
+- System notifications.
+
+ANIMATIONS:
+- XP gain animation.
+- Quest completion animation.
+- Level-up animation.
+- Phase-unlock animation.
+- Achievement animation.
+- System notification/glow.
+- Subtle futuristic System Core animation.
+- Keep animations lightweight and Android-friendly.
+- Respect reduced-motion preferences where practical.
+
+AUDIO:
+- Original/licensed SFX only.
+- XP, quest complete, level up, unlock, streak, achievement and Boss Test sounds.
+- Sound ON/OFF and volume control.
+- Do not use copyrighted sounds from Solo Leveling.
+
+QUALITY:
+- Mobile-first.
+- Fast startup.
+- Smooth navigation.
+- No unnecessary heavy animations.
+- No data loss.
+- No duplicate completion rewards.
+- Correct calendar-day handling for daily quests.
+- Proper empty/loading/error states.
+- Clean TypeScript.
+- Fix existing runtime/build errors that block the app.
+- Do not introduce unnecessary dependencies.
+
+IMPORTANT:
+Do not redesign everything from scratch.
+Improve the existing ARISE project while preserving its identity and existing working functionality.
+
+First inspect the entire current implementation and give me a concise plan.
+Then implement the highest-priority fixes and improvements.
+Finally run typecheck and verify the Preview.

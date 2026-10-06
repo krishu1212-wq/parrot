@@ -1,0 +1,16 @@
+- [Expo Metro module IDs](expo-metro-module-ids.md) — numeric IDs are graph-local; inspect live dependencies and rebuild Metro without touching study storage.
+- [Manifest-derived Expo bundle URLs](expo-manifest-bundle-routes.md) — on Replit, probe Android with the manifest's launchAsset URL, not guessed root paths.
+- [Expo native-preview capture](expo-native-preview-capture.md) — Android bundle logs confirm fetching, not native visual access; Expo appPreview may show a separate signed-out web session.
+- [Legacy aggregate ownership](legacy-aggregate-ownership.md) — reconstructed book details must not overwrite historical shelf totals; apply only real new activity deltas.
+- [Study flow compatibility](study-flow-compatibility.md) — preserve established Phase 2 prerequisites and any-day Recovery; completed-course Maths revision uses the daily goal.
+- [Managed AI readiness](managed-ai-readiness.md) — model-catalog probing can fail while generation works; configuration checks must not make paid background requests.
+- [Achievement evidence](achievement-evidence.md) — partial legacy saves can inherit seeded defaults; those defaults do not prove historical achievements or peaks.
+- [Scoped event identity](daily-event-identity.md) — daily quests need the study day; lecture events need their full nested path, not a bare lecture ID.
+- [Persistence test runtimes](persistence-test-runtimes.md) — remount tests must share the app module graph; isolated runtimes model different app instances.
+- [RPG reward ownership](rpg-reward-ownership.md) — keep canonical base XP separate from signed gear bonuses; Gate Boss practice must not replace official weekly tests.
+- [ARISE visual direction](arise-visual-direction.md) — app-wide layered RPG artwork and contextual colors, not repeated navy/cyan cards or a color-only reskin.
+- [React Native DevTools Nix dependencies](react-native-devtools-nix.md) — inspect the prebuilt Linux binary’s missing shared libraries and install their Nix packages in Replit.
+- [Level-up reward attribution](level-up-reward-attribution.md) — never infer a reward-to-level-up link from date, timestamp, or XP totals.
+- [Guild integrity rules](guild-integrity-rules.md) — submissions reference saved study events and grant Guild-side points only; notes are context, not proof.
+- [Profile restore security](profile-restore-security.md) — preserve recovery-key protection until the blueprint's Account-Code-only restore conflict is resolved without locking out profiles.
+- [Question Bank boundaries](question-bank-boundaries.md) — preserve source hierarchy and answers; never generate content or alter RPG progression through an unverified bank.
